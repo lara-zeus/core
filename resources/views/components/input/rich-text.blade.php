@@ -17,5 +17,8 @@
         @push('scripts')
             <script src="https://unpkg.com/trix@1.3.1/dist/trix.js" defer></script>
         @endpush
+        @push('styles')
+            <link rel="stylesheet" href="https://unpkg.com/trix@1.3.1/dist/trix.css">
+        @endpush
     @endonce
 </div>

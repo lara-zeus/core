@@ -3,13 +3,13 @@
         messages: [],
         remove(message) {
             this.messages.splice(this.messages.indexOf(message), 1)
-        },
+        }
     }"
     @notify.window="console.log($event.detail); let message = $event.detail; messages.push(message); setTimeout(() => { remove(message) }, 2500)"
     class="fixed inset-0 flex flex-col items-end justify-center px-4 py-6 pointer-events-none sm:p-6 sm:justify-start space-y-4 z-50">
 
     <template x-for="(message, messageIndex) in messages" :key="messageIndex" hidden>
-        <div
+       <div
             x-transition:enter="transform ease-out duration-300 transition"
             x-transition:enter-start="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2"
             x-transition:enter-end="translate-y-0 opacity-100 sm:translate-x-0"
@@ -40,16 +40,3 @@
         </div>
     </template>
 </div>
-{{--<div class="rounded-lg shadow-xs overflow-hidden">
-    <div class="p-4">
-        <div class="flex items-start">
-            <div class="flex-shrink-0">
-
-            </div>
-            <div class="ml-3 w-0 flex-1 pt-0.5">
-                <p  class="text-sm leading-5 font-medium text-gray-900"></p>
-            </div>
-
-        </div>
-    </div>
-</div>--}}

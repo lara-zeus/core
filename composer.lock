@@ -7354,16 +7354,16 @@
         },
         {
             "name": "spatie/ray",
-            "version": "1.29.1",
+            "version": "1.29.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/ray.git",
-                "reference": "80423a297ba6ebee3e44240a0bda8ec09cc742c3"
+                "reference": "54fab06e3cdeef2b64290fe48645c21dea2fb9ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/ray/zipball/80423a297ba6ebee3e44240a0bda8ec09cc742c3",
-                "reference": "80423a297ba6ebee3e44240a0bda8ec09cc742c3",
+                "url": "https://api.github.com/repos/spatie/ray/zipball/54fab06e3cdeef2b64290fe48645c21dea2fb9ef",
+                "reference": "54fab06e3cdeef2b64290fe48645c21dea2fb9ef",
                 "shasum": ""
             },
             "require": {
@@ -7413,7 +7413,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/ray/issues",
-                "source": "https://github.com/spatie/ray/tree/1.29.1"
+                "source": "https://github.com/spatie/ray/tree/1.29.2"
             },
             "funding": [
                 {
@@ -7425,7 +7425,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2021-08-14T17:50:23+00:00"
+            "time": "2021-08-15T09:41:49+00:00"
         },
         {
             "name": "symfony/stopwatch",

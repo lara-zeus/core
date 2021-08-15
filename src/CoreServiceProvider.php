@@ -4,6 +4,7 @@ namespace LaraZeus\Core;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Livewire\Component;
 use Validator;
@@ -16,9 +17,20 @@ class CoreServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'zeus');
+        $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'bolt');
 
         // Core
         $this->macros();
+
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__.'/../config/config.php' => config_path('zeus.php'),
+            ], 'zeus-config');
+
+            $this->publishes([
+                __DIR__.'/../resources/lang' => resource_path('lang/vendor/bolt'),
+            ], 'zeus-lang');
+        }
 
         // Core
         Validator::extend('slug', function ($attribute, $value, $parameters, $validator) {
@@ -31,6 +43,8 @@ class CoreServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'zeus');
+
         $this->app->singleton('core', function () {
             return new Core();
         });
@@ -52,6 +66,27 @@ class CoreServiceProvider extends ServiceProvider
             });
 
             return $this;
+        });
+
+        // pkg port
+        Builder::macro('toCsv', function () {
+            $results = $this->get();
+
+            if ($results->count() < 1) {
+                return;
+            }
+
+            $titles = implode(',', array_keys((array) $results->first()->getAttributes()));
+
+            $values = $results->map(function ($result) {
+                return implode(',', collect($result->getAttributes())->map(function ($thing) {
+                    return '"'.$thing.'"';
+                })->toArray());
+            });
+
+            $values->prepend($titles);
+
+            return $values->implode("\n");
         });
     }
 }
