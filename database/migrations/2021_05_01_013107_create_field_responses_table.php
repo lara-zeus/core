@@ -15,7 +15,7 @@ class CreateFieldResponsesTable extends Migration
     {
         Schema::create('field_responses', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('form_id')->constrained('bolt');
+            $table->foreignId('form_id')->constrained('forms');
             $table->foreignId('field_id')->constrained('fields');
             $table->foreignId('response_id')->constrained('responses');
             $table->text('response');

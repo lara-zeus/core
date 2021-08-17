@@ -15,7 +15,7 @@ class CreateSectionsTable extends Migration
     {
         Schema::create('sections', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('form_id')->constrained('bolt');
+            $table->foreignId('form_id')->constrained('forms');
             $table->string('name');
             $table->integer('ordering')->default(1);
             $table->timestamps();

@@ -17,7 +17,7 @@ class CreateFieldsTable extends Migration
         // {"values":[],"defaultValues":[]
         Schema::create('fields', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('form_id')->constrained('bolt');
+            $table->foreignId('form_id')->constrained('forms');
             $table->foreignId('section_id')->constrained('sections');
             $table->string('name');
             $table->text('description')->nullable();

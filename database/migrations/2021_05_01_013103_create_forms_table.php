@@ -23,7 +23,7 @@ class CreateFormsTable extends Migration
         //"oneEntryPerUser":0,
         //"sectionsToPages":0}
 
-        Schema::create('bolt', function (Blueprint $table) {
+        Schema::create('forms', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users');
             $table->string('name');
@@ -48,6 +48,6 @@ class CreateFormsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bolt');
+        Schema::dropIfExists('forms');
     }
 }
