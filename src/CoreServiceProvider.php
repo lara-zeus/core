@@ -30,6 +30,18 @@ class CoreServiceProvider extends ServiceProvider
             $this->publishes([
                 __DIR__.'/../resources/lang' => resource_path('lang/vendor/bolt'),
             ], 'zeus-lang');
+
+            $this->publishes([
+                __DIR__.'/../database/migrations' => database_path('migrations'),
+            ], 'zeus-migrations');
+
+            $this->publishes([
+                __DIR__.'/../database/seeders' => database_path('seeders'),
+            ], 'zeus-seeder');
+
+            $this->publishes([
+                __DIR__.'/../database/factories' => database_path('factories'),
+            ], 'zeus-factories');
         }
 
         // Core
