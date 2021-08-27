@@ -1,5 +1,5 @@
 <?php
-$list = \LaraZeus\Core\Models\Forms\Collection::find($field->options['dataSource']);
+$list = \LaraZeus\Core\Models\Collection::find($field->options['dataSource']);
 ?>
 
 <select wire:model="fieldResponse.{{ $field['id'] }}.response"

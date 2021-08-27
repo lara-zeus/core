@@ -1,4 +1,8 @@
 <div x-data x-init="tippy('[data-tippy-content]', {animation: 'perspective'});">
+    <x-slot name="title">
+        {{ $title }}
+    </x-slot>
+
     <x-slot name="header">
         <h2>{{ $title }}</h2>
     </x-slot>
@@ -34,10 +38,14 @@
                     {{--this is so uggly, todo, ref: https://github.com/laravel/framework/issues/32045--}}
                     @if($oprations['create'])
                         @if(isset($createRoute) && $createRoute !== null)
-                            <x-zeus::elements.button-link url="{{ route($createRoute) }}">
-                                <x-heroicon-o-plus class="h-5 w-5 inline align-middle"/>
-                                New
-                            </x-zeus::elements.button-link>
+                            @if($createRoute === 'COMPONENT')
+                                @livewire('zeus.form-collection', ['fld'=>1,'options'=>false], key(1))
+                            @else
+                                <x-zeus::elements.button-link url="{{ route($createRoute) }}">
+                                    <x-heroicon-o-plus class="h-5 w-5 inline align-middle"/>
+                                    New
+                                </x-zeus::elements.button-link>
+                            @endif
                         @else
                             <x-zeus::elements.button-link wire:click="create">
                                 <x-heroicon-o-plus class="h-5 w-5 inline align-middle"/>

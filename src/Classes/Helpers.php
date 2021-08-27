@@ -6,7 +6,7 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Str;
-use LaraZeus\Core\Models\Forms\Field;
+use LaraZeus\Core\Models\Field;
 use Symfony\Component\Finder\Finder;
 
 class Helpers
@@ -118,27 +118,39 @@ class Helpers
             Cache::forget('Forms.Fields');
         }
 
-        $appFields = self::appFields();
+        return Cache::remember('Forms.Fields', Carbon::parse('1 month'), function () {
+            $appFields = self::appFields();
+            $boltFields = self::boltFields();
+            $coreFields = self::coreFields();
 
-        return Cache::remember('Forms.Fields', Carbon::parse('1 month'), function () use ($appFields) {
-            $path = __DIR__.'/Fields/Classes';
-            $classes = self::loadClasses($path, __NAMESPACE__.'\\Fields\\Classes\\');
-            $allFields = [];
+            $fields = collect();
 
-            foreach ($classes as $class) {
-                $fieldClass = new $class();
-                if (!$fieldClass->disabled) {
-                    $fieldClass->definition['isZeus'] = true;
-                    $allFields[] = $fieldClass->definition;
-                }
+            if (!$coreFields->isEmpty()) {
+                $fields = $fields->merge($coreFields);
             }
 
-            if ($appFields->isEmpty()) {
-                return collect($allFields)->sortBy('order');
+            if (!$appFields->isEmpty()) {
+                $fields = $fields->merge($appFields);
             }
 
-            return collect($allFields)->merge($appFields)->sortBy('order');
+            if (!$boltFields->isEmpty()) {
+                $fields = $fields->merge($boltFields);
+            }
+
+            return $fields->sortBy('order');
         });
+    }
+
+    public static function coreFields()
+    {
+        $path = __DIR__.'/Fields/Classes';
+        if (!is_dir($path)) {
+            return collect();
+        }
+        $classes = self::loadClasses($path, __NAMESPACE__.'\\Fields\\Classes\\');
+        $allFields = self::setFields($classes, true);
+
+        return collect($allFields);
     }
 
     public static function appFields()
@@ -148,17 +160,35 @@ class Helpers
             return collect();
         }
         $classes = self::loadClasses($path, 'App\\Zeus\\Fields\\');
-        $allFields = [];
+        $allFields = self::setFields($classes, false);
 
+        return collect($allFields);
+    }
+
+    protected static function boltFields()
+    {
+        $path = base_path('vendor/lara-zeus/bolt/src/Classes/Fields/Classes');
+        if (!is_dir($path)) {
+            return collect();
+        }
+        $classes = self::loadClasses($path, 'LaraZeus\\Bolt\\Classes\\Fields\\Classes\\');
+        $allFields = self::setFields($classes, true);
+
+        return collect($allFields);
+    }
+
+    protected static function setFields($classes, $isZeus)
+    {
+        $allFields = [];
         foreach ($classes as $class) {
             $fieldClass = new $class();
             if (!$fieldClass->disabled) {
-                $fieldClass->definition['isZeus'] = false;
+                $fieldClass->definition['isZeus'] = $isZeus;
                 $allFields[] = $fieldClass->definition;
             }
         }
 
-        return collect($allFields)->sortBy('order');
+        return $allFields;
     }
 
     public static function loadClasses($path, $namespace)

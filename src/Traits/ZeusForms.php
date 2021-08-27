@@ -2,7 +2,7 @@
 
 namespace LaraZeus\Core\Traits;
 
-use LaraZeus\Core\Models\Forms\Form;
+use LaraZeus\Core\Models\Form;
 
 trait ZeusForms
 {

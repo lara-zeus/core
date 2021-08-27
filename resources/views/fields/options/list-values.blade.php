@@ -1,7 +1,7 @@
 <div class="space-y-4">
     <x-zeus::input.group for="dataSource-{{ $fld }}" inline label="Data Source">
         <x-slot name="labelIcon">
-            @livewire('bolt.create-collection', ['fld'=>$fld], key($fld))
+            @livewire('zeus.form-collection', ['fld'=>$fld,'options'=>true], key($fld))
         </x-slot>
 
         <x-zeus::input.select id="field-type-{{ $fld }}" wire:model="fields.{{ $sec }}.{{ $fld }}.options.dataSource" id="dataSource-{{ $fld }}">

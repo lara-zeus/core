@@ -2,7 +2,7 @@
 
 namespace LaraZeus\Core\Classes;
 
-use LaraZeus\Core\Models\Forms\Collection;
+use LaraZeus\Core\Models\Collection;
 
 class Builder
 {

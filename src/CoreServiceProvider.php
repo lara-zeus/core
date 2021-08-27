@@ -6,7 +6,9 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
+use LaraZeus\Core\Http\Livewire\CreateCollection;
 use Livewire\Component;
+use Livewire\Livewire;
 use Validator;
 
 class CoreServiceProvider extends ServiceProvider
@@ -18,6 +20,8 @@ class CoreServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'zeus');
         $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'bolt');
+
+        Livewire::component('zeus.form-collection', CreateCollection::class);
 
         // Core
         $this->macros();

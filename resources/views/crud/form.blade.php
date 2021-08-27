@@ -4,19 +4,22 @@
             {{ \Illuminate\Support\Str::title($action) }} {{ \Illuminate\Support\Str::title($titleSingular) ?? 'item' }}
             @if($action === 'edit')
                 <div class="text-xs mt-2">
-                    <span class="text-gray-400">Created at:</span> <span class="text-gray-600">{{ $row->created_at->format(config('zeus.defaultDateFormat', 'M, d Y · h:i a')) }}</span> ·
-                    <span class="text-gray-400">Last updated at:</span><span class="text-gray-600"> {{ $row->updated_at->format(config('zeus.defaultDateFormat', 'M, d Y · h:i a')) }}</span> ·
-                    <span class="text-gray-400">by:</span> <span class="text-gray-600">{{ $row->user->name }}</span>
+                    <span class="text-gray-400">Created at:</span> <span class="text-gray-600">{{ $model->created_at->format(config('zeus.defaultDateFormat', 'M, d Y · h:i a')) }}</span> ·
+                    <span class="text-gray-400">Last updated at:</span><span class="text-gray-600"> {{ $model->updated_at->format(config('zeus.defaultDateFormat', 'M, d Y · h:i a')) }}</span> ·
+                    <span class="text-gray-400">by:</span> <span class="text-gray-600">{{ $model->user->name }}</span>
                 </div>
             @endif
         </x-slot>
 
         <x-slot name="content">
             @foreach($fields->where('type') as $field)
-                <x-zeus::input.group for="{{ $field['id'] }}" label="{{ $field['label'] }}" :error="$errors->first('model.'.$field['id'])">
-                    {{ $model }}
-                    <x-dynamic-component :component="'zeus::'.$field['type']" wire:model="model.{{ $field['id'] }}" id="{{ $field['id'] }}" placeholder="{{ $field['label'] }}"/>
-                </x-zeus::input.group>
+                @if($field['type'] === 'input.array')
+                    {{--@livewire('zeus.form-collection', ['fld'=>1], key(1))--}}
+                @else
+                    <x-zeus::input.group for="{{ $field['id'] }}" label="{{ $field['label'] }}" :error="$errors->first('model.'.$field['id'])">
+                        <x-dynamic-component :component="'zeus::'.$field['type']" wire:model="model.{{ $field['id'] }}" id="{{ $field['id'] }}" placeholder="{{ $field['label'] }}"/>
+                    </x-zeus::input.group>
+                @endif
             @endforeach
         </x-slot>
 
