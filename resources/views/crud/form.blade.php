@@ -15,6 +15,10 @@
             @foreach($fields->where('type') as $field)
                 @if($field['type'] === 'input.array')
                     {{--@livewire('zeus.form-collection', ['fld'=>1], key(1))--}}
+                @elseif($field['type'] === 'input.file-upload')
+                    <x-zeus::input.group for="{{ $field['id'] }}" label="{{ $field['label'] }}" :error="$errors->first($field['id'])">
+                        <x-dynamic-component :component="'zeus::'.$field['type']" wire:model="{{ $field['id'] }}" id="{{ $field['id'] }}" placeholder="{{ $field['label'] }}"/>
+                    </x-zeus::input.group>
                 @else
                     <x-zeus::input.group for="{{ $field['id'] }}" label="{{ $field['label'] }}" :error="$errors->first('model.'.$field['id'])">
                         <x-dynamic-component :component="'zeus::'.$field['type']" wire:model="model.{{ $field['id'] }}" id="{{ $field['id'] }}" placeholder="{{ $field['label'] }}"/>

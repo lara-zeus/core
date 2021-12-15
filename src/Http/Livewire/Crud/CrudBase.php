@@ -4,10 +4,11 @@ namespace LaraZeus\Core\Http\Livewire\Crud;
 
 use Illuminate\Support\Facades\Schema;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class CrudBase extends Component
 {
-    use WithPerPagePagination, WithSorting, WithBulkActions;
+    use WithPerPagePagination, WithSorting, WithBulkActions, WithFileUploads;
 
     public $desc;
     public $fields;
@@ -146,9 +147,14 @@ class CrudBase extends Component
     public function save()
     {
         $this->validate();
-
         if (Schema::hasColumn($this->model->getTable(), 'user_id')) {
             $this->model->user_id = auth()->user()->id;
+        }
+
+        if (isset($this->uploads)) {
+            foreach ($this->uploads as $upload) {
+                $this->model->{$upload} = $this->{$upload}->store('logos','public');
+            }
         }
 
         $this->model->save();

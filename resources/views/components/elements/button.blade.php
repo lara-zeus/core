@@ -5,7 +5,7 @@
         ($attributes->get('disabled') ? ' opacity-75 cursor-not-allowed' : '').
         ($attributes->get('color')
             ? ' bg-'.$attributes->get('color').'-600 text-'.$attributes->get('color').'-50 hover:text-'.$attributes->get('color').'-200 hover:bg-'.$attributes->get('color').'-800'
-            : ' bg-green-600 text-green-50 hover:text-green-200 hover:bg-green-800')
+            : ' bg-primary-600 text-primary-50 hover:text-primary-200 hover:bg-primary-800')
         ,
     ]) }}
 >

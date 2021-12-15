@@ -1,7 +1,7 @@
 # Changelog
 
-All notable changes to `former` will be documented in this file
+All notable changes to `zeus-core` will be documented in this file
 
-## 1.0.0 - 201X-XX-XX
+## 0.0.1 - 201X-XX-XX
 
 - initial release

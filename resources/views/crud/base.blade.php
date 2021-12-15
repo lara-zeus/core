@@ -8,7 +8,7 @@
     </x-slot>
 
     <x-slot name="breadcrumb">
-        <x-bolt::breadcrumb-item :label="$breadcrumbTitle"/>
+        <x-zeus::layouts.breadcrumb-item :label="$breadcrumbTitle"/>
     </x-slot>
 
     @if($setListView !== null)
@@ -17,7 +17,7 @@
         <x-zeus::box>
             @if($oprations['create'])
                 <div class="text-gray-500 mb-2">
-                    <h2 class="text-xl">{{ $title }}</h2>
+                    {{--<h2 class="text-xl">{{ $title }}</h2>--}}
                     @if(isset($desc) && !empty($desc))
                         <p class="text-sm">{!! $desc !!}</p>
                     @endif
@@ -28,7 +28,7 @@
                 <div>
                     @if(!$oprations['create'])
                         <div class="text-gray-500 mb-2">
-                            <h2 class="text-xl">{{ $title }}</h2>
+                            {{--<h2 class="text-xl">{{ $title }}</h2>--}}
                             @if(isset($desc) && !empty($desc))
                                 <p class="text-sm">{!! $desc !!}</p>
                             @endif
@@ -59,13 +59,13 @@
                     @if($oprations['search'] || $oprations['filters'])
                         @if($filters['search'] || $sorts)
                             <x-zeus::elements.link wire:click="resetAll" class="mt-2">
-                                <x-heroicon-o-refresh class="h-6 w-6 text-green-600"/>
+                                <x-heroicon-o-refresh class="h-6 w-6 text-primary-600"/>
                             </x-zeus::elements.link>
                         @endif
 
                         <x-zeus::dropdown.main>
                             <x-slot name="icon">
-                                <x-heroicon-o-adjustments class="h-5 w-5 text-green-600"/>
+                                <x-heroicon-o-adjustments class="h-5 w-5 text-primary-600"/>
                             </x-slot>
                             <x-zeus::dropdown.item type="button" class="flex items-center space-x-2">
                                 <div class="flex flex-col w-full text-left">

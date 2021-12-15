@@ -16,7 +16,7 @@
             x-transition:leave="transition ease-in duration-100"
             x-transition:leave-start="opacity-100"
             x-transition:leave-end="opacity-0"
-            :class="{ 'border-yellow-600 text-yellow-600': message[1] === 'warning', 'border-red-600 text-red-600': message[1] === 'error', 'border-green-600 text-green-600': message[1] === 'success' }"
+            :class="{ 'border-secondary-600 text-secondary-600': message[1] === 'warning', 'border-red-600 text-red-600': message[1] === 'error', 'border-primary-600 text-primary-600': message[1] === 'success' }"
             class="border border-r-8 bg-white rounded-xl shadow-md">
 
             <div class="flex items-center px-2 py-3">

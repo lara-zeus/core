@@ -14,7 +14,7 @@
         {{ $attributes->whereDoesntStartWith('wire:model') }}
         x-ref="input"
         x-bind:value="value"
-        class="block w-full px-4 py-2 text-gray-700 text-sm leading-5 bg-white border border-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-green-500 dark:focus:border-green-500 focus:outline-none focus:border-green-200 transition duration-150 ease-in-out"
+        class="block w-full px-4 py-2 text-gray-700 text-sm leading-5 bg-white border border-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-primary-600 dark:focus:border-primary-600 focus:outline-none focus:border-primary-200 transition duration-150 ease-in-out"
     />
 
     @once

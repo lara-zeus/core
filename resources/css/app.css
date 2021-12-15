@@ -1,0 +1,21 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import '_draggable.css';
+@import '_checkbox-cards.css';
+
+
+.scroll::-webkit-scrollbar {
+    width: 7px;
+    background: #fff;
+}
+
+.scroll::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: lightgray;
+}

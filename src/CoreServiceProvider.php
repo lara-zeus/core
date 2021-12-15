@@ -6,9 +6,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
-use LaraZeus\Core\Http\Livewire\CreateCollection;
 use Livewire\Component;
-use Livewire\Livewire;
 use Validator;
 
 class CoreServiceProvider extends ServiceProvider
@@ -19,16 +17,14 @@ class CoreServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'zeus');
-        $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'bolt');
-
-        Livewire::component('zeus.form-collection', CreateCollection::class);
+        $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'zeus');
 
         // Core
         $this->macros();
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('zeus.php'),
+                __DIR__.'/../config/config.php' => config_path('zeus/core.php'),
             ], 'zeus-config');
 
             $this->publishes([
@@ -46,11 +42,25 @@ class CoreServiceProvider extends ServiceProvider
             $this->publishes([
                 __DIR__.'/../database/factories' => database_path('factories'),
             ], 'zeus-factories');
+
+            $this->publishes([
+                __DIR__.'/../resources/assets' => public_path('vendor/zeus'),
+                __DIR__.'/../resources/images' => public_path('vendor/zeus/images'),
+            ], 'zeus-assets');
+
+            $this->publishes([
+                __DIR__.'/../resources/views/components/layouts' => resource_path('views/vendor/zeus/components/layouts'),
+            ], 'zeus-views');
         }
 
         // Core
         Validator::extend('slug', function ($attribute, $value, $parameters, $validator) {
             return preg_match('/^[a-z0-9]+(?:-[a-z0-9]+)*$/', $value);
+        });
+
+        Blade::directive('zeus', function ($part = null) {
+            return '<span class="text-gray-700 group"><span class="font-semibold text-green-600 group-hover:text-yellow-500 transition ease-in-out duration-300">Lara&nbsp;<span class="line-through italic text-yellow-500 group-hover:text-green-600 transition ease-in-out duration-300">Z</span>eus</span></span>'
+                .($part) ?? '<span class="text-base tracking-wide text-gray-500">{$part}</span>';
         });
     }
 
@@ -80,29 +90,7 @@ class CoreServiceProvider extends ServiceProvider
                     $query->orWhere($column, 'like', '%'.$search.'%');
                 }
             });
-
             return $this;
-        });
-
-        // pkg port
-        Builder::macro('toCsv', function () {
-            $results = $this->get();
-
-            if ($results->count() < 1) {
-                return;
-            }
-
-            $titles = implode(',', array_keys((array) $results->first()->getAttributes()));
-
-            $values = $results->map(function ($result) {
-                return implode(',', collect($result->getAttributes())->map(function ($thing) {
-                    return '"'.$thing.'"';
-                })->toArray());
-            });
-
-            $values->prepend($titles);
-
-            return $values->implode("\n");
         });
     }
 }

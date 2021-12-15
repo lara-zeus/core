@@ -1,4 +1,5 @@
 <div class="flex-col space-y-4">
+    @php $listFields = $fields->where('formOnly',false) @endphp
     <x-zeus::table.main>
         <x-slot name="head">
             @if($oprations['bulkActions'])
@@ -7,7 +8,7 @@
                 </x-zeus::table.heading>
             @endif
 
-            @foreach($fields as $field)
+            @foreach($listFields as $field)
                 <x-zeus::table.heading sortable multi-column wire:click="sortBy('{{ $field['id'] }}')" :direction="$sorts[$field['id']] ?? null" class="bg-gray-100">
                     {{ $field['label'] }}
                 </x-zeus::table.heading>
@@ -27,14 +28,14 @@
                 @if($oprations['bulkActions'])
                     @if ($selectPage && ($rows->count() !== $rows->total()))
                         <x-zeus::table.row class="bg-gray-50" wire:key="row-message">
-                            <x-zeus::table.cell colspan="{{ $fields->count() + 3 }}">
+                            <x-zeus::table.cell colspan="{{ $listFields->count() + 3 }}">
                                 @unless ($selectAll)
                                     <div>
-                                        <span>You have selected <strong class="font-bold text-green-600">{{ $rows->count() }}</strong> items, do you want to select all <strong class="font-bold text-green-600">{{ $rows->total() }}</strong> ?</span>
-                                        <x-zeus::elements.link wire:click="selectAll" class="ml-1 text-gray-600 bg-gray-200 px-2 py-0.5 rounded hover:text-green-600">Select All</x-zeus::elements.link>
+                                        <span>You have selected <strong class="font-bold text-primary-600">{{ $rows->count() }}</strong> items, do you want to select all <strong class="font-bold text-primary-600">{{ $rows->total() }}</strong> ?</span>
+                                        <x-zeus::elements.link wire:click="selectAll" class="ml-1 text-gray-600 bg-gray-200 px-2 py-0.5 rounded hover:text-primary-600">Select All</x-zeus::elements.link>
                                     </div>
                                 @else
-                                    <span>You are currently selecting all <strong class="font-bold text-green-600">{{ $rows->total() }}</strong> items.</span>
+                                    <span>You are currently selecting all <strong class="font-bold text-primary-600">{{ $rows->total() }}</strong> items.</span>
                                 @endif
                             </x-zeus::table.cell>
                         </x-zeus::table.row>
@@ -42,7 +43,7 @@
                 @endif
             </div>
             @forelse ($rows as $row)
-                <x-zeus::table.row wire:loading.class.delay="opacity-0 animate-pulse" class="hover:bg-gray-50 transition duration-150 ease-in-out" wire:key="row-{{ $row->id }}">
+                <x-zeus::table.row class="hover:bg-gray-50 transition duration-150 ease-in-out" wire:key="row-{{ $row->id }}">
 
                     @if($oprations['bulkActions'])
                         <x-zeus::table.cell class="pr-0">
@@ -50,16 +51,20 @@
                         </x-zeus::table.cell>
                     @endif
 
-                    @foreach($fields as $field)
+                    @foreach($listFields as $field)
                         <x-zeus::table.cell>
-                            @if(\Illuminate\Support\Str::contains($field['id'],'.'))
-                                {{ ($flattenedRows[$loop->parent->index.'.'.$field['id']]) ?? '' }}
-                            @elseif(isset($field['listAtt']))
-                                {!! $row->{$field['listAtt']} !!}
-                            @elseif(isset($row->{$field['id']}))
-                                {{ $row->{$field['id']} }}
+                            @if($field['type'] === 'input.file-upload')
+                                <img class="w-20 h-20" src="{{ asset('storage/'.$row->{$field['id']}) }}">
                             @else
-                                {{ $field['id'] ?? '' }}
+                                @if(\Illuminate\Support\Str::contains($field['id'],'.'))
+                                    {{ ($flattenedRows[$loop->parent->index.'.'.$field['id']]) ?? '' }}
+                                @elseif(isset($field['listAtt']))
+                                    {!! $row->{$field['listAtt']} !!}
+                                @elseif(isset($row->{$field['id']}))
+                                    {{ $row->{$field['id']} }}
+                                @else
+                                    {{ $field['id'] ?? '' }}
+                                @endif
                             @endif
                         </x-zeus::table.cell>
                     @endforeach

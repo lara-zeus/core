@@ -11,7 +11,7 @@
 
 @if($inline)
     <div>
-        <label for="{{ $for }}" class="@if($labelless) sr-only @endif flex justify-between text-base font-medium leading-5 text-green-700">
+        <label for="{{ $for }}" class="@if($labelless) sr-only @endif flex justify-between text-base font-medium leading-5 text-primary-700">
             <span>{{ $label }}</span>
             @if(isset($labelIcon))
             <span>{{ $labelIcon }}</span>
