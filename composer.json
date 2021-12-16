@@ -4,7 +4,9 @@
     "keywords": [
         "laravel",
         "lara-zeus",
-        "form"
+        "form",
+        "core",
+        "contact"
     ],
     "homepage": "https://github.com/lara-zeus",
     "license": "MIT",
