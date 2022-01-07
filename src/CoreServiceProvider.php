@@ -19,16 +19,13 @@ class CoreServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'zeus');
         $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'zeus');
 
-        // Core
-        $this->macros();
-
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('zeus/core.php'),
+                __DIR__.'/../config/config.php' => config_path('zeus.php'),
             ], 'zeus-config');
 
             $this->publishes([
-                __DIR__.'/../resources/lang' => resource_path('lang/vendor/bolt'),
+                __DIR__.'/../resources/lang' => resource_path('lang/vendor/zeus'),
             ], 'zeus-lang');
 
             $this->publishes([
@@ -53,11 +50,6 @@ class CoreServiceProvider extends ServiceProvider
             ], 'zeus-views');
         }
 
-        // Core
-        Validator::extend('slug', function ($attribute, $value, $parameters, $validator) {
-            return preg_match('/^[a-z0-9]+(?:-[a-z0-9]+)*$/', $value);
-        });
-
         Blade::directive('zeus', function ($part = null) {
             return '<span class="text-gray-700 group"><span class="font-semibold text-green-600 group-hover:text-yellow-500 transition ease-in-out duration-300">Lara&nbsp;<span class="line-through italic text-yellow-500 group-hover:text-green-600 transition ease-in-out duration-300">Z</span>eus</span></span>'
                 .($part) ?? '<span class="text-base tracking-wide text-gray-500 ml-4">{$part}</span>';
@@ -73,24 +65,6 @@ class CoreServiceProvider extends ServiceProvider
 
         $this->app->singleton('core', function () {
             return new Core();
-        });
-    }
-
-    public function macros()
-    {
-        // Core
-        Component::macro('notify', function ($message, $type = 'success') {
-            $this->dispatchBrowserEvent('notify', [$message, $type]);
-        });
-
-        // Core
-        Builder::macro('search', function ($columns, $search) {
-            $this->where(function ($query) use ($columns, $search) {
-                foreach (Arr::wrap($columns) as $column) {
-                    $query->orWhere($column, 'like', '%'.$search.'%');
-                }
-            });
-            return $this;
         });
     }
 }

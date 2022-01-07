@@ -16,24 +16,7 @@
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 @auth
                     <div class="ml-3 relative">
-                        <x-zeus::dropdown.main>
-                            <x-slot name="icon">
-                                <img class="h-8 w-8 rounded-full object-cover" src="{{ auth()->user()->profile_photo_url }}" alt="{{ auth()->user()->name }}"/>
-                            </x-slot>
-
-                            <x-zeus::dropdown.head type="button" class="flex items-center space-x-2 cursor-default">
-                                <span>{{ __('Manage Account') }}</span>
-                            </x-zeus::dropdown.head>
-                            <div class="border-t border-gray-100"></div>
-
-                            <form method="POST" action="{{ route('logout') }}">
-                                @csrf
-                                <x-zeus::dropdown.item type="button" href="{{ route('logout') }}" class="flex items-center space-x-2" onclick="event.preventDefault(); this.closest('form').submit();">
-                                    <span class="text-red-600">{{ __('Log Out') }}</span>
-                                </x-zeus::dropdown.item>
-                            </form>
-
-                        </x-zeus::dropdown.main>
+                        account
                     </div>
                 @else
                     @if (Route::has('login'))
@@ -58,7 +41,7 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            {{ __('bolt') }}
+            {{ __('Zeus') }}
         </div>
 
         <div class="pt-4 pb-1 border-t border-gray-200">
@@ -77,16 +60,20 @@
 
             <div class="mt-3 space-y-1">
                 @auth
-                    <a href="{{ route('profile.show') }}">
-                        {{ __('Profile') }}
-                    </a>
-                    <form method="POST" action="{{ route('logout') }}">
-                        @csrf
-
-                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();">
-                            {{ __('Log Out') }}
+                    @if (Route::has('profile.show'))
+                        <a href="{{ route('profile.show') }}">
+                            {{ __('Profile') }}
                         </a>
-                    </form>
+                    @endif
+                    @if (Route::has('logout'))
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+
+                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();">
+                                {{ __('Log Out') }}
+                            </a>
+                        </form>
+                    @endif
                 @endauth
             </div>
         </div>

@@ -29,35 +29,16 @@
 <x-zeus::layouts.nav/>
 
 @if(isset($header))
-    @if(config('zeus.path').config('zeus.admin.prefix') !== request()->route()->getPrefix())
-        <x-zeus::layouts.userHeader :header="$header" :breadcrumb="$breadcrumb ?? null" :options="$options ?? null"/>
-    @endif
+    <x-zeus::layouts.userHeader :header="$header" :breadcrumb="$breadcrumb ?? null" :options="$options ?? null"/>
 @endif
 
 <main class="flex max-w-7xl mx-auto">
-    @if(config('zeus.path').config('zeus.admin.prefix') === request()->route()->getPrefix() && (!isset($withoutSideNav) || !$withoutSideNav))
-        <div class="w-1/6 py-2">
-            @if(config('zeus.path').config('zeus.admin.prefix') === request()->route()->getPrefix())
-                <x-zeus::layouts.sidenav-admin/>
-            @else
-                <x-zeus::layouts.sidenav-user/>
-            @endif
-        </div>
-    @endif
     <div class="flex-grow">
-        @if(isset($header))
-            @if(config('zeus.path').config('zeus.admin.prefix') === request()->route()->getPrefix())
-                <x-zeus::layouts.adminHeader :header="$header" :breadcrumb="$breadcrumb ?? null" :options="$options ?? null"/>
-            @endif
-        @endif
-
         {{ $slot }}
     </div>
 </main>
 
 <x-zeus::layouts.footer/>
-
-<x-zeus::notification/>
 
 <script src="{{ asset('vendor/zeus/app.js') }}" defer></script>
 
