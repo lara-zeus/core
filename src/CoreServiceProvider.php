@@ -2,12 +2,8 @@
 
 namespace LaraZeus\Core;
 
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
-use Livewire\Component;
-use Validator;
 
 class CoreServiceProvider extends ServiceProvider
 {
@@ -23,22 +19,6 @@ class CoreServiceProvider extends ServiceProvider
             $this->publishes([
                 __DIR__.'/../config/config.php' => config_path('zeus.php'),
             ], 'zeus-config');
-
-            $this->publishes([
-                __DIR__.'/../resources/lang' => resource_path('lang/vendor/zeus'),
-            ], 'zeus-lang');
-
-            $this->publishes([
-                __DIR__.'/../database/migrations' => database_path('migrations'),
-            ], 'zeus-migrations');
-
-            $this->publishes([
-                __DIR__.'/../database/seeders' => database_path('seeders'),
-            ], 'zeus-seeder');
-
-            $this->publishes([
-                __DIR__.'/../database/factories' => database_path('factories'),
-            ], 'zeus-factories');
 
             $this->publishes([
                 __DIR__.'/../resources/assets' => public_path('vendor/zeus'),

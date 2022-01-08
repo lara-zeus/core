@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ (isset($title)) ? $title .' | '. config('zeus.name', config('app.name', 'Laravel')) : config('zeus.name', config('app.name', 'Laravel')) }}</title>
+    <title>{{ (isset($title)) ? $title .' | '. config('app.name', 'Laravel') : config('app.name', 'Laravel') }}</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=KoHo:ital,wght@0,200;0,300;0,500;0,700;1,200;1,300;1,600;1,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ asset('vendor/zeus/app.css') }}">
-    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/perspective.css"/>
     @livewireStyles
     @stack('styles')
     <style>
@@ -29,7 +28,13 @@
 <x-zeus::layouts.nav/>
 
 @if(isset($header))
-    <x-zeus::layouts.userHeader :header="$header" :breadcrumb="$breadcrumb ?? null" :options="$options ?? null"/>
+    <header class="bg-gray-100">
+        <div class="max-w-7xl mx-auto py-2 px-3">
+            <div class="italic font-semibold text-xl text-gray-600">
+                {{ $header }}
+            </div>
+        </div>
+    </header>
 @endif
 
 <main class="flex max-w-7xl mx-auto">
@@ -38,13 +43,15 @@
     </div>
 </main>
 
-<x-zeus::layouts.footer/>
+<footer class="bg-gray-100 p-6 mt-20">
+    <div class="text-gray-400 text-center font-light">
+        built by @zeus
+    </div>
+</footer>
 
 <script src="{{ asset('vendor/zeus/app.js') }}" defer></script>
 
 @livewireScripts
 @stack('scripts')
-<script src="https://unpkg.com/@popperjs/core@2"></script>
-<script src="https://unpkg.com/tippy.js@6"></script>
 </body>
 </html>

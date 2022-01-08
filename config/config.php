@@ -1,10 +1,6 @@
 <?php
 
 return [
-    'name' => 'Lara Zeus',
-
-    'path' => '/',
-
     'prefix' => '',
 
     'middleware' => ['web'],
