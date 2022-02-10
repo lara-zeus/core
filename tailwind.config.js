@@ -1,15 +1,15 @@
-const colors       = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors')
 
 module.exports = {
-    content:    [
+    content: [
         './resources/views/**/*.blade.php',
-        './resources/css/app.css',
+        '../wind-pkg/resources/views/**/*.blade.php',
     ],
-    theme:    {
+    theme: {
         extend: {
             colors: {
-                primary:     colors.yellow,
-                secondary:   colors.green,
+                primary: colors.green,
+                secondary: colors.yellow,
                 danger: colors.rose,
                 success: colors.green,
                 warning: colors.yellow,
