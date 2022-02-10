@@ -4,6 +4,7 @@ module.exports = {
     content: [
         './resources/views/**/*.blade.php',
         '../wind-pkg/resources/views/**/*.blade.php',
+        '../wind/resources/views/**/*.blade.php',
     ],
     theme: {
         extend: {
