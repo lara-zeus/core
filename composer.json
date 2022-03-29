@@ -24,7 +24,7 @@
         "blade-ui-kit/blade-icons": "^1.2",
         "codeat3/blade-iconpark": "^1.4",
         "illuminate/support": "^9.0",
-        "livewire/livewire": "^2.10"
+        "filament/filament": "^2.0"
     },
     "require-dev": {
         "orchestra/testbench": "^7.0",

@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="application-name" content="{{ config('app.name', 'Laravel') }}">
 
     <title>{{ (isset($title)) ? $title .' | '. config('app.name', 'Laravel') : config('app.name', 'Laravel') }}</title>
 
@@ -14,13 +15,8 @@
     @livewireStyles
     @stack('styles')
     <style>
-        * {
-            font-family: 'KoHo', 'Almarai', sans-serif;
-        }
-
-        [x-cloak] {
-            display: none !important;
-        }
+        * {font-family: 'KoHo', 'Almarai', sans-serif;}
+        [x-cloak] {display: none !important;}
     </style>
 </head>
 <body class="font-sans antialiased bg-gray-50">
