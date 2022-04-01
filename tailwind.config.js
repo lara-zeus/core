@@ -7,6 +7,7 @@ module.exports = {
         '../sky-pkg/resources/views/**/*.blade.php',
         './vendor/filament/**/*.blade.php',
         '../wind/resources/views/**/*.blade.php',
+        '../sky/resources/views/**/*.blade.php',
     ],
     theme: {
         extend: {
