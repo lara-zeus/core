@@ -1,5 +1,5 @@
 <nav x-data="{ open: false }" class="bg-white border-0 border-gray-100">
-    <div class="max-w-7xl mx-auto">
+    <div class="container mx-auto">
         <div class="flex justify-between h-16">
             <div class="flex">
                 <div class="flex-shrink-0 flex items-center">

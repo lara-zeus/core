@@ -25,7 +25,7 @@
 
 @if(isset($header))
     <header class="bg-gray-100">
-        <div class="max-w-7xl mx-auto py-2 px-3">
+        <div class="container mx-auto py-2 px-3">
             <div class="italic font-semibold text-xl text-gray-600">
                 {{ $header }}
             </div>
@@ -33,7 +33,7 @@
     </header>
 @endif
 
-<main class="flex max-w-7xl mx-auto">
+<main class="flex container mx-auto">
     <div class="flex-grow">
         {{ $slot }}
     </div>
