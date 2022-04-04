@@ -1,4 +1,10 @@
 {
     "/assets/app.js": "/assets/app.js",
-    "/assets/app.css": "/assets/app.css"
+    "/assets/app.css": "/assets/app.css",
+    "/nadel/public/vendor/zeus/app.css": "/nadel/public/vendor/zeus/app.css",
+    "/nadel/public/vendor/zeus/app.js": "/nadel/public/vendor/zeus/app.js",
+    "/nadel/public/vendor/zeus/app.js.LICENSE.txt": "/nadel/public/vendor/zeus/app.js.LICENSE.txt",
+    "/nadel/public/vendor/zeus/images/.DS_Store": "/nadel/public/vendor/zeus/images/.DS_Store",
+    "/nadel/public/vendor/zeus/images/defualt-user-avatar.png": "/nadel/public/vendor/zeus/images/defualt-user-avatar.png",
+    "/nadel/public/vendor/zeus/images/zeus-logo.png": "/nadel/public/vendor/zeus/images/zeus-logo.png"
 }
