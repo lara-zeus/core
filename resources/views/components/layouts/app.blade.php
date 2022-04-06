@@ -10,7 +10,11 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="application-name" content="{{ config('app.name', 'Laravel') }}">
 
-    <title>{{ (isset($title)) ? $title .' | '. config('app.name', 'Laravel') : config('app.name', 'Laravel') }}</title>
+    {{--<title>{{ (isset($title)) ? $title .' | '. config('app.name', 'Laravel') : config('app.name', 'Laravel') }}</title>--}}
+
+    <!-- Seo Tags -->
+    <x-seo::meta />
+    <!-- Seo Tags -->
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=KoHo:ital,wght@0,200;0,300;0,500;0,700;1,200;1,300;1,600;1,700&display=swap" rel="stylesheet">
