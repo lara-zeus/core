@@ -5,9 +5,13 @@ module.exports = {
         './resources/views/**/*.blade.php',
         '../wind-pkg/resources/views/**/*.blade.php',
         '../sky-pkg/resources/views/**/*.blade.php',
+        '../bolt-pkg/resources/views/**/*.blade.php',
+
         './vendor/filament/**/*.blade.php',
+
         '../wind/resources/views/**/*.blade.php',
         '../sky/resources/views/**/*.blade.php',
+        '../bolt/resources/views/**/*.blade.php',
     ],
     theme: {
         extend: {

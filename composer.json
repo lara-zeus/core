@@ -20,12 +20,10 @@
     ],
     "require": {
         "php": "^8.0",
-        "archtechx/laravel-seo": "^0.4.0",
-        "blade-ui-kit/blade-heroicons": "^1.3",
-        "blade-ui-kit/blade-icons": "^1.2",
-        "codeat3/blade-iconpark": "^1.4",
+        "illuminate/support": "^8.0 || ^9.0",
         "filament/filament": "^2.0",
-        "illuminate/support": "^8.0 || ^9.0"
+        "archtechx/laravel-seo": "^0.4.0",
+        "calebporzio/sushi": "^2.4"
     },
     "require-dev": {
         "orchestra/testbench": "^6.0 || ^7.0",

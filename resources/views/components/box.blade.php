@@ -5,7 +5,7 @@
             ]) }}
 >
     @if(isset($header))
-        <div class="bg-gray-100 rounded-t-lg p-4 border-b border-gray-200">
+        <div class="bg-gray-50 rounded-t-lg p-4 border-b border-gray-200">
             {{ $header }}
         </div>
     @endif

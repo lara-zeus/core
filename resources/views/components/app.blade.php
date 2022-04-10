@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<html
-      lang="{{ str_replace('_', '-', app()->getLocale()) }}"
-      dir="{{ __('filament::layout.direction') ?? 'ltr' }}"
->
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="{{ __('filament::layout.direction') ?? 'ltr' }}">
 <head>
 
     <meta charset="utf-8">
@@ -10,10 +7,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="application-name" content="{{ config('app.name', 'Laravel') }}">
 
-    {{--<title>{{ (isset($title)) ? $title .' | '. config('app.name', 'Laravel') : config('app.name', 'Laravel') }}</title>--}}
-
     <!-- Seo Tags -->
-    <x-seo::meta />
+    <x-seo::meta/>
     <!-- Seo Tags -->
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -22,15 +17,41 @@
     <link rel="stylesheet" href="{{ asset('vendor/zeus/app.css') }}">
     @livewireStyles
     @stack('styles')
+
     <style>
         * {font-family: 'KoHo', 'Almarai', sans-serif;}
+
         [x-cloak] {display: none !important;}
+
+        @if(app()->isLocal())
         .bord {border: solid 1px crimson}
+        @endif
     </style>
 </head>
 <body class="font-sans antialiased bg-gray-50">
 
-<x-zeus::layouts.nav/>
+<nav x-data="{ open: false }" class="bg-white border-0 border-gray-100 px-4">
+    <div class="container mx-auto">
+        <div class="flex justify-between h-16">
+            <div class="flex">
+                <div class="flex-shrink-0 flex items-center">
+                    <a class="italic flex gap-2 group" href="{{ url('/') }}">
+                        <img class="w-7" src="{{ asset('vendor/zeus/images/zeus-logo.png') }}" alt="{{ config('zeus.wind.name', config('app.name', 'Laravel')) }}">
+                        @zeus
+                    </a>
+                </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    {{--Navigation Links--}}
+                </div>
+
+            </div>
+            <div class="hidden sm:flex sm:items-center sm:ml-6">
+                {{--Account menu and other icons--}}
+            </div>
+        </div>
+    </div>
+</nav>
 
 @if(isset($header))
     <header class="bg-gray-100">
@@ -49,14 +70,15 @@
 </main>
 
 <footer class="bg-gray-100 p-6 mt-20">
-    <div class="text-gray-400 text-center font-light">
-        built by @zeus
-    </div>
+    <a href="https://larazeus.com" target="_blank" class="text-center font-light block">
+        a gift with  ❤️  &nbsp;from @zeus(wind)
+    </a>
 </footer>
 
 <script src="{{ asset('vendor/zeus/app.js') }}" defer></script>
 
 @livewireScripts
 @stack('scripts')
+
 </body>
 </html>
