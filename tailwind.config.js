@@ -22,6 +22,7 @@ module.exports = {
                 danger: colors.rose,
                 success: colors.green,
                 warning: colors.yellow,
+                info: colors.blue,
             }
         },
     },
