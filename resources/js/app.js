@@ -1,6 +1,3 @@
-/*require('./_select2');
-require('./_tager');*/
-
 import Alpine from 'alpinejs'
 import FormsAlpinePlugin from '../../vendor/filament/forms/dist/module.esm'
 

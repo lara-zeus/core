@@ -2,6 +2,10 @@
 
 All notable changes to `zeus` will be documented in this file
 
+## 1.0.0 - 2022-04-19
+
+- clean up unused assets
+
 ## 0.0.4 - 2022-03-20
 
 - add support for laravel 8

@@ -4,9 +4,6 @@ namespace LaraZeus\Core;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
-use Livewire\Component;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Support\Arr;
 
 class CoreServiceProvider extends ServiceProvider
 {
@@ -15,10 +12,7 @@ class CoreServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->macros();
-
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'zeus');
-        $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'zeus');
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
@@ -27,11 +21,10 @@ class CoreServiceProvider extends ServiceProvider
 
             $this->publishes([
                 __DIR__.'/../resources/assets' => public_path('vendor/zeus'),
-                __DIR__.'/../resources/images' => public_path('vendor/zeus/images'),
             ], 'zeus-assets');
 
             $this->publishes([
-                __DIR__.'/../resources/views/components/layouts' => resource_path('views/vendor/zeus/components/layouts'),
+                __DIR__.'/../resources/views/components' => resource_path('views/vendor/zeus/components'),
             ], 'zeus-views');
         }
 
@@ -48,28 +41,5 @@ class CoreServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'zeus');
-
-        $this->app->singleton('core', function () {
-            return new Core();
-        });
     }
-
-    public function macros()
-    {
-        // Core
-        Component::macro('notify', function ($message, $type = 'success') {
-            $this->dispatchBrowserEvent('notify', [$message, $type]);
-        });
-
-        // Core
-        Builder::macro('search', function ($columns, $search) {
-            $this->where(function ($query) use ($columns, $search) {
-                foreach (Arr::wrap($columns) as $column) {
-                    $query->orWhere($column, 'like', '%'.$search.'%');
-                }
-            });
-            return $this;
-        });
-    }
-
 }

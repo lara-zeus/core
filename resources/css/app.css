@@ -1,6 +1,5 @@
 @import '../../vendor/filament/forms/dist/module.esm.css';
 
-/*@import '_draggable.css';*/
 @import '_checkbox-cards.css';
 
 @tailwind base;

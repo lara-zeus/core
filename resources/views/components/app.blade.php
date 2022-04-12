@@ -20,12 +20,7 @@
 
     <style>
         * {font-family: 'KoHo', 'Almarai', sans-serif;}
-
         [x-cloak] {display: none !important;}
-
-        @if(app()->isLocal())
-        .bord {border: solid 1px crimson}
-        @endif
     </style>
 </head>
 <body class="font-sans antialiased bg-gray-50">
@@ -36,7 +31,7 @@
             <div class="flex">
                 <div class="flex-shrink-0 flex items-center">
                     <a class="italic flex gap-2 group" href="{{ url('/') }}">
-                        <img class="w-7" src="{{ asset('vendor/zeus/images/zeus-logo.png') }}" alt="{{ config('zeus.wind.name', config('app.name', 'Laravel')) }}">
+                        <img class="w-7" src="https://larazeus.com/images/zeus-logo.png" alt="{{ config('zeus.wind.name', config('app.name', 'Laravel')) }}">
                         @zeus
                     </a>
                 </div>
@@ -53,12 +48,27 @@
     </div>
 </nav>
 
-@if(isset($header))
+@if(isset($header) || isset($breadcrumps))
     <header class="bg-gray-100">
         <div class="container mx-auto py-2 px-3">
-            <div class="italic font-semibold text-xl text-gray-600">
-                {{ $header }}
-            </div>
+            @if(isset($header))
+                <div class="italic font-semibold text-xl text-gray-600">
+                    {{ $header }}
+                </div>
+            @endif
+
+            @if(isset($breadcrumps))
+                <nav class="text-gray-400 font-bold my-2" aria-label="Breadcrumb">
+                    <ol class="list-none p-0 inline-flex">
+                        <li class="flex items-center">
+                            <a href="{{ url('/') }}">Home</a>
+                            <x-iconpark-rightsmall-o class="fill-current w-4 h-4 mx-3" />
+                        </li>
+                        {{ $breadcrumps }}
+                    </ol>
+                </nav>
+            @endif
+
         </div>
     </header>
 @endif
@@ -71,7 +81,7 @@
 
 <footer class="bg-gray-100 p-6 mt-20">
     <a href="https://larazeus.com" target="_blank" class="text-center font-light block">
-        a gift with  ❤️  &nbsp;from @zeus(wind)
+        a gift with ❤️ &nbsp;from @zeus
     </a>
 </footer>
 
