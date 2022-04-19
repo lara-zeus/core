@@ -9,11 +9,11 @@
 }
 
 .checkbox-input:checked + .checkbox-tile {
-    @apply border border-yellow-100 text-primary-500 shadow-lg;
+    @apply border border-secondary-100 text-primary-500 shadow-lg;
 }
 
 .checkbox-input:checked + .checkbox-tile:before {
-    @apply border border-yellow-100 bg-yellow-500;
+    @apply border border-secondary-100 bg-secondary-500;
     transform: scale(1);
     opacity: 1;
 }
@@ -23,7 +23,7 @@
 }
 
 .checkbox-input:focus + .checkbox-tile {
-    @apply border border-yellow-500 ring-4 ring-yellow-100 shadow;
+    @apply border border-secondary-500 ring-4 ring-secondary-100 shadow;
 }
 
 .checkbox-input:focus + .checkbox-tile:before {
@@ -46,7 +46,7 @@
 }
 
 .checkbox-tile:before {
-    @apply border border-yellow-500;
+    @apply border border-primary-500;
     content: "";
     position: absolute;
     display: block;
