@@ -1,7 +1,7 @@
 <h1 align="center">Lara Zeus Core</h1>
 
 <p align="center">
-<a href="https://larazeus.com"><img src="https://larazeus.com/images/core-banner.png" /></a>
+<a href="https://larazeus.com"><img src="https://larazeus.com/images/core-docs.png" /></a>
 </p>
 
 <p align="center">
