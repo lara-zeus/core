@@ -5,3 +5,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+span.highlight {
+    @apply bg-primary-200 text-primary-700 px-2
+}

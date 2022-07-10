@@ -6,6 +6,9 @@ mix.js('resources/js/app.js', 'dist')
        require('tailwindcss'),
    ])
     .setPublicPath('resources')
+
+   //.copy('resources/dist', '../demo/public/vendor/zeus')
+
 ;
 
 if (mix.inProduction()) {
