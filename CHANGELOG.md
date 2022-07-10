@@ -2,6 +2,11 @@
 
 All notable changes to `zeus` will be documented in this file
 
+## 2.1.0 - 2022-07-10
+
+- update the css 
+- update filament to 2.13
+
 ## 1.0.0 - 2022-04-19
 
 - clean up unused assets
