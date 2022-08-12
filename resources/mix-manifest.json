@@ -1,4 +1,7 @@
 {
-    "/dist/app.js": "/dist/app.js?id=1f7b388349adf189a920ec414a1efa34",
-    "/dist/app.css": "/dist/app.css?id=9fdb1fcf56345fe75aaed1328a0982c3"
+    "/dist/app.js": "/dist/app.js",
+    "/dist/app.css": "/dist/app.css",
+    "/demo/public/vendor/zeus/app.css": "/demo/public/vendor/zeus/app.css",
+    "/demo/public/vendor/zeus/app.js": "/demo/public/vendor/zeus/app.js",
+    "/demo/public/vendor/zeus/app.js.LICENSE.txt": "/demo/public/vendor/zeus/app.js.LICENSE.txt"
 }

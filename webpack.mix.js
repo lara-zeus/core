@@ -7,7 +7,7 @@ mix.js('resources/js/app.js', 'dist')
    ])
     .setPublicPath('resources')
 
-   //.copy('resources/dist', '../demo/public/vendor/zeus')
+   .copy('resources/dist', '../demo/public/vendor/zeus')
 
 ;
 

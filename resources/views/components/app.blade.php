@@ -87,8 +87,8 @@
 
 <script src="{{ asset('vendor/zeus/app.js') }}" defer></script>
 
-@livewireScripts
 @stack('scripts')
-
+@livewireScripts
+@livewire('notifications')
 </body>
 </html>
