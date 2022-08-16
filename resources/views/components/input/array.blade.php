@@ -89,8 +89,3 @@
         </div>
     @endforeach
 </div>
-@once
-    @push('scripts')
-        <script src="https://cdn.jsdelivr.net/gh/livewire/sortable@v0.x.x/dist/livewire-sortable.js"></script>
-    @endpush
-@endonce
