@@ -5,12 +5,11 @@ mix.js('resources/js/app.js', 'dist')
        require('postcss-import'),
        require('tailwindcss'),
    ])
-    .setPublicPath('resources')
-
-   //.copy('resources/dist', '../demo/public/vendor/zeus')
-
+   .setPublicPath('resources')
 ;
 
 if (mix.inProduction()) {
     mix.version();
+} else {
+    mix.copy('resources/dist', '../demo/public/vendor/zeus')
 }
