@@ -11,7 +11,6 @@ mix.js('resources/js/app.js', 'dist')
 if (mix.inProduction()) {
     mix.version();
 } else {
-    console.log(111);
     mix.copy('resources/dist', '../demo/public/vendor/zeus')
     mix.copy('resources/dist', '../bolt-pkg/resources/dist')
 }
