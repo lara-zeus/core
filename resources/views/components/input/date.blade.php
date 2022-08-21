@@ -1,6 +1,6 @@
 <div
     x-data="{ value: @entangle($attributes->wire('model')), picker: undefined }"
-    x-init="new Pikaday({ field: $refs.input, onOpen() { this.setDate($refs.input.value) } })"
+    x-init="new Pikaday({ field: $refs.input, onOpen() { this.setDate(moment($refs.input.value,'DD/MM/YYYY').toDate()) } })"
     x-on:change="value = $event.target.value"
     class="flex rounded-md shadow-sm"
 >
