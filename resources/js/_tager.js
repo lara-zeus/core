@@ -8,6 +8,6 @@ var randomProperty = function (obj) {
 };
 const targets = document.querySelectorAll('.tager');
 
-targets.forEach(fakeImage => {
-    fakeImage.style.backgroundColor = randomProperty(colors)[100];
+targets.forEach(target => {
+    target.style.backgroundColor = randomProperty(colors)[200];
 });
