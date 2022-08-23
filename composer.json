@@ -22,7 +22,7 @@
         "php": "^8.0",
         "illuminate/support": "^8.0 || ^9.0",
         "filament/filament": "^2.15",
-        "archtechx/laravel-seo": "^0.4.0",
+        "archtechx/laravel-seo": "^0.5",
         "codeat3/blade-iconpark": "^1.4",
         "calebporzio/sushi": "^2.4"
     },
