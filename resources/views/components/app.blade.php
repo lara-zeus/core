@@ -23,34 +23,36 @@
         [x-cloak] {display: none !important;}
     </style>
 </head>
-<body class="font-sans antialiased bg-gray-50">
+<body class="font-sans antialiased bg-gray-50 @if(app()->isLocal()) debug-screens @endif">
 
-<nav x-data="{ open: false }" class="bg-white border-0 border-gray-100 px-4">
+<header x-data="{ open: false }" class="bg-white px-4">
     <div class="container mx-auto">
-        <div class="flex justify-between h-16">
-            <div class="flex">
-                <div class="flex-shrink-0 flex items-center">
-                    <a class="italic flex gap-2 group" href="{{ url('/') }}">
-                        <img class="w-7" src="https://larazeus.com/images/zeus-logo.png" alt="{{ config('zeus.wind.name', config('app.name', 'Laravel')) }}">
-                        @zeus
-                    </a>
-                </div>
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a class="italic flex gap-2 group" href="{{ url('/') }}">
+                            <img class="w-7" src="https://larazeus.com/images/zeus-logo.png" alt="{{ config('zeus.wind.name', config('app.name', 'Laravel')) }}">
+                            @zeus
+                        </a>
+                    </div>
 
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    {{--Navigation Links--}}
-                </div>
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        {{--Navigation Links--}}
+                    </div>
 
-            </div>
-            <div class="hidden sm:flex sm:items-center sm:ml-6">
-                {{--Account menu and other icons--}}
+                </div>
+                <div class="hidden sm:flex sm:items-center sm:ml-6">
+                    <x-lang-switcher/>
+                    {{--Account menu and other icons--}}
+                </div>
             </div>
         </div>
-    </div>
-</nav>
+</header>
 
 @if(isset($header) || isset($breadcrumps))
     <header class="bg-gray-100">
         <div class="container mx-auto py-2 px-3">
+
             @if(isset($header))
                 <div class="italic font-semibold text-xl text-gray-600">
                     {{ $header }}
@@ -73,14 +75,12 @@
     </header>
 @endif
 
-<main class="flex container mx-auto">
-    <div class="flex-grow">
-        {{ $slot }}
-    </div>
-</main>
+<div class="container mx-auto">
+    {{ $slot }}
+</div>
 
-<footer class="bg-gray-100 p-6 mt-20">
-    <a href="https://larazeus.com" target="_blank" class="text-center font-light block">
+<footer class="bg-gray-100 p-6 mt-20 text-center font-light">
+    <a href="https://larazeus.com" target="_blank">
         a gift with ❤️ &nbsp;from @zeus
     </a>
 </footer>

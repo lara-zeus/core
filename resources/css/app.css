@@ -9,3 +9,7 @@
 span.highlight {
     @apply bg-primary-200 text-primary-700 px-2
 }
+
+.bord{
+    border: solid 1px chocolate;
+}
