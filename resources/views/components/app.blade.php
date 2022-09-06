@@ -42,7 +42,6 @@
 
                 </div>
                 <div class="hidden sm:flex sm:items-center sm:ml-6">
-                    <x-lang-switcher/>
                     {{--Account menu and other icons--}}
                 </div>
             </div>
