@@ -6,6 +6,7 @@ module.exports = {
         '../wind-pkg/resources/views/**/*.blade.php',
         '../sky-pkg/resources/views/**/*.blade.php',
         '../bolt-pkg/resources/views/**/*.blade.php',
+        '../thunder-pkg/resources/views/**/*.blade.php',
         './vendor/filament/**/*.blade.php',
     ],
     theme: {

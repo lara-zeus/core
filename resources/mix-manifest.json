@@ -1,5 +1,13 @@
 {
-    "/dist/app.js": "/dist/app.js?id=381845c8ac9b553efc2ede0efe9f03cf",
-    "/dist/admin.js": "/dist/admin.js?id=9ed0ce8c3b95b4c8d5508ebf108f5bfd",
-    "/dist/app.css": "/dist/app.css?id=bccd2187ca6d1668f242f18827b785d4"
+    "/dist/app.js": "/dist/app.js",
+    "/dist/admin.js": "/dist/admin.js",
+    "/dist/app.css": "/dist/app.css",
+    "/demo/public/vendor/zeus/admin.js": "/demo/public/vendor/zeus/admin.js",
+    "/demo/public/vendor/zeus/app.css": "/demo/public/vendor/zeus/app.css",
+    "/demo/public/vendor/zeus/app.js": "/demo/public/vendor/zeus/app.js",
+    "/demo/public/vendor/zeus/app.js.LICENSE.txt": "/demo/public/vendor/zeus/app.js.LICENSE.txt",
+    "/bolt-pkg/resources/dist/admin.js": "/bolt-pkg/resources/dist/admin.js",
+    "/bolt-pkg/resources/dist/app.css": "/bolt-pkg/resources/dist/app.css",
+    "/bolt-pkg/resources/dist/app.js": "/bolt-pkg/resources/dist/app.js",
+    "/bolt-pkg/resources/dist/app.js.LICENSE.txt": "/bolt-pkg/resources/dist/app.js.LICENSE.txt"
 }
