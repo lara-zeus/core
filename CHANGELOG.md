@@ -2,6 +2,14 @@
 
 All notable changes to `zeus` will be documented in this file
 
+## 2.3.1 - 2022-09-17
+
+### What's Changed
+
+- update composer by @atmonshi in https://github.com/lara-zeus/core/pull/23
+
+**Full Changelog**: https://github.com/lara-zeus/core/compare/2.3.0...2.3.1
+
 ## 2.3.0 - 2022-09-17
 
 #### What's Changed
@@ -20,11 +28,13 @@ All notable changes to `zeus` will be documented in this file
 ```bash
 php artisan vendor:publish --tag=zeus-assets
 
+
 ```
 the same for the views, backup your changes and republish them:
 
 ```bash
 php artisan vendor:publish --tag=zeus-views
+
 
 ```
 **Full Changelog**: https://github.com/lara-zeus/core/compare/2.2.10...2.3.0
