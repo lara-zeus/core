@@ -21,5 +21,5 @@ mix
 if (mix.inProduction()) {
     mix.version();
 } else {
-    mix.copy('resources/dist', '../demo/public/vendor/zeus')
+    mix.copy('resources/dist', '../../public/vendor/zeus')
 }

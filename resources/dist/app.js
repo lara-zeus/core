@@ -2978,8 +2978,8 @@ var module_default = src_default;
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/module.esm.js");
-/* harmony import */ var _vendor_filament_forms_dist_module_esm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../vendor/filament/forms/dist/module.esm */ "./vendor/filament/forms/dist/module.esm.js");
-/* harmony import */ var _vendor_filament_notifications_dist_module_esm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../vendor/filament/notifications/dist/module.esm */ "./vendor/filament/notifications/dist/module.esm.js");
+/* harmony import */ var _vendor_filament_forms_dist_module_esm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../vendor/filament/forms/dist/module.esm */ "../../vendor/filament/forms/dist/module.esm.js");
+/* harmony import */ var _vendor_filament_notifications_dist_module_esm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../vendor/filament/notifications/dist/module.esm */ "../../vendor/filament/notifications/dist/module.esm.js");
 
 
 
@@ -2990,10 +2990,10 @@ alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
 
 /***/ }),
 
-/***/ "./vendor/filament/forms/dist/module.esm.js":
-/*!**************************************************!*\
-  !*** ./vendor/filament/forms/dist/module.esm.js ***!
-  \**************************************************/
+/***/ "../../vendor/filament/forms/dist/module.esm.js":
+/*!******************************************************!*\
+  !*** ../../vendor/filament/forms/dist/module.esm.js ***!
+  \******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -3198,10 +3198,10 @@ var js_default=function js_default(Alpine){Alpine.plugin(color_picker_default2);
 
 /***/ }),
 
-/***/ "./vendor/filament/notifications/dist/module.esm.js":
-/*!**********************************************************!*\
-  !*** ./vendor/filament/notifications/dist/module.esm.js ***!
-  \**********************************************************/
+/***/ "../../vendor/filament/notifications/dist/module.esm.js":
+/*!**************************************************************!*\
+  !*** ../../vendor/filament/notifications/dist/module.esm.js ***!
+  \**************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);

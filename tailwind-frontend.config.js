@@ -1,18 +1,19 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
+    darkMode: 'class',
     content: [
         './resources/views/**/*.blade.php',
 
-        '../wind-pkg/resources/views/themes/**/*.blade.php',
+        '../wind/resources/views/themes/**/*.blade.php',
 
-        '../sky-pkg/resources/views/themes/**/*.blade.php',
+        '../sky/resources/views/themes/**/*.blade.php',
 
-        '../bolt-pkg/resources/views/themes/**/*.blade.php',
+        '../bolt/resources/views/themes/**/*.blade.php',
 
-        '../thunder-pkg/resources/views/themes/**/*.blade.php',
+        '../thunder/resources/views/themes/**/*.blade.php',
 
-        './vendor/filament/**/*.blade.php',
+        '../../vendor/filament/**/*.blade.php',
     ],
     theme: {
         extend: {

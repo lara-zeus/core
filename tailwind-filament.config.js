@@ -1,6 +1,7 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
+    darkMode: 'class',
     content: [
         '../wind-pkg/resources/views/filament/**/*.blade.php',
 
