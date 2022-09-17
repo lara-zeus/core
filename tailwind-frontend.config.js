@@ -3,10 +3,15 @@ const colors = require('tailwindcss/colors')
 module.exports = {
     content: [
         './resources/views/**/*.blade.php',
-        '../wind-pkg/resources/views/**/*.blade.php',
-        '../sky-pkg/resources/views/**/*.blade.php',
-        '../bolt-pkg/resources/views/**/*.blade.php',
-        '../thunder-pkg/resources/views/**/*.blade.php',
+
+        '../wind-pkg/resources/views/themes/**/*.blade.php',
+
+        '../sky-pkg/resources/views/themes/**/*.blade.php',
+
+        '../bolt-pkg/resources/views/themes/**/*.blade.php',
+
+        '../thunder-pkg/resources/views/themes/**/*.blade.php',
+
         './vendor/filament/**/*.blade.php',
     ],
     theme: {

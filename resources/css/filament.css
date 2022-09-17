@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* debug tool 😜 */
+.bord{
+    border: solid 1px chocolate;
+}

@@ -1,5 +1,12 @@
 {
-    "/dist/app.js": "/dist/app.js?id=381845c8ac9b553efc2ede0efe9f03cf",
-    "/dist/admin.js": "/dist/admin.js?id=9ed0ce8c3b95b4c8d5508ebf108f5bfd",
-    "/dist/app.css": "/dist/app.css?id=596333d68ff042d8274afd2d96ab77d6"
+    "/dist/app.js": "/dist/app.js",
+    "/dist/filament.js": "/dist/filament.js",
+    "/dist/frontend.css": "/dist/frontend.css",
+    "/dist/filament.css": "/dist/filament.css",
+    "/demo/public/vendor/zeus/admin.js": "/demo/public/vendor/zeus/admin.js",
+    "/demo/public/vendor/zeus/app.js": "/demo/public/vendor/zeus/app.js",
+    "/demo/public/vendor/zeus/app.js.LICENSE.txt": "/demo/public/vendor/zeus/app.js.LICENSE.txt",
+    "/demo/public/vendor/zeus/filament.css": "/demo/public/vendor/zeus/filament.css",
+    "/demo/public/vendor/zeus/filament.js": "/demo/public/vendor/zeus/filament.js",
+    "/demo/public/vendor/zeus/frontend.css": "/demo/public/vendor/zeus/frontend.css"
 }
