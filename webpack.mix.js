@@ -1,18 +1,25 @@
 const mix = require('laravel-mix');
+const tailwindcss = require("tailwindcss");
 
 mix
     .js('resources/js/app.js', 'dist')
-    .js('resources/js/admin.js', 'dist')
-   .postCss('resources/css/app.css', 'dist', [
-       require('postcss-import'),
-       require('tailwindcss'),
-   ])
+    .js('resources/js/filament.js', 'dist')
+
+    .postCss('resources/css/filament.css', 'dist', [
+        require('postcss-import'),
+        tailwindcss("./tailwind-filament.config.js"),
+    ])
+
+    .postCss('resources/css/frontend.css', 'dist', [
+        require('postcss-import'),
+        tailwindcss("./tailwind-frontend.config.js"),
+    ])
+
    .setPublicPath('resources')
 ;
 
 if (mix.inProduction()) {
     mix.version();
 } else {
-    mix.copy('resources/dist', '../demo/public/vendor/zeus')
-    mix.copy('resources/dist', '../bolt-pkg/resources/dist')
+    mix.copy('resources/dist', '../../public/vendor/zeus')
 }

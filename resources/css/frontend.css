@@ -1,4 +1,4 @@
-@import '../../vendor/filament/forms/dist/module.esm.css';
+@import '../../../../vendor/filament/forms/dist/module.esm.css';
 
 @import '_checkbox-cards.css';
 
@@ -6,10 +6,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Sky search result highlight */
 span.highlight {
     @apply bg-primary-200 text-primary-700 px-2
 }
 
+/* debug tool 😜 */
 .bord{
     border: solid 1px chocolate;
 }
