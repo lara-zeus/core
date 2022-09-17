@@ -1,10 +1,6 @@
 {
-    "/dist/app.js": "/dist/app.js",
-    "/dist/filament.js": "/dist/filament.js",
-    "/dist/frontend.css": "/dist/frontend.css",
-    "/dist/filament.css": "/dist/filament.css",
-    "/public/vendor/zeus/app.js": "/public/vendor/zeus/app.js",
-    "/public/vendor/zeus/filament.css": "/public/vendor/zeus/filament.css",
-    "/public/vendor/zeus/filament.js": "/public/vendor/zeus/filament.js",
-    "/public/vendor/zeus/frontend.css": "/public/vendor/zeus/frontend.css"
+    "/dist/app.js": "/dist/app.js?id=0c77758d0a4da76939672ae1799c94a3",
+    "/dist/filament.js": "/dist/filament.js?id=9ed0ce8c3b95b4c8d5508ebf108f5bfd",
+    "/dist/frontend.css": "/dist/frontend.css?id=3b82af370f2499b8bd2b6420c848158f",
+    "/dist/filament.css": "/dist/filament.css?id=96613eaf6734093b894edd19e1137ad4"
 }
