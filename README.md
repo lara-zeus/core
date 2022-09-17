@@ -6,7 +6,6 @@
 
 <p align="center">
 <a href="https://packagist.org/packages/lara-zeus/core"><img src="https://img.shields.io/packagist/v/lara-zeus/core?style=flat-square" /></a>
-<a href="https://github.styleci.io/repos/372062018?branch=main"><img src="https://github.styleci.io/repos/438676758/shield?branch=main" alt="StyleCI"></a>
 <a href="https://packagist.org/packages/lara-zeus/core"><img src="https://img.shields.io/packagist/dt/lara-zeus/core?style=flat-square" /></a>
 <a href="https://github.com/lara-zeus/core"><img src="https://img.shields.io/github/stars/lara-zeus/core?style=flat-square" /></a>
 <a href="https://www.codefactor.io/repository/github/lara-zeus/core"><img src="https://www.codefactor.io/repository/github/lara-zeus/core/badge" alt="CodeFactor" /></a>

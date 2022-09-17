@@ -4,15 +4,10 @@ module.exports = {
     darkMode: 'class',
     content: [
         './resources/views/**/*.blade.php',
-
         '../wind/resources/views/themes/**/*.blade.php',
-
         '../sky/resources/views/themes/**/*.blade.php',
-
         '../bolt/resources/views/themes/**/*.blade.php',
-
         '../thunder/resources/views/themes/**/*.blade.php',
-
         '../../vendor/filament/**/*.blade.php',
     ],
     theme: {
