@@ -11,11 +11,11 @@ class CoreServiceProvider extends PluginServiceProvider
     public static string $name = 'zeus';
 
     protected array $styles = [
-        'zeus-filament' => __DIR__ . '/../resources/dist/filament.css',
+        'zeus-filament' => __DIR__.'/../resources/dist/filament.css',
     ];
 
     protected array $scripts = [
-        'zeus-filament' => __DIR__ . '/../resources/dist/filament.js',
+        'zeus-filament' => __DIR__.'/../resources/dist/filament.js',
     ];
 
     public function boot(): CoreServiceProvider
