@@ -2,6 +2,14 @@
 
 All notable changes to `zeus` will be documented in this file
 
+## 2.3.2 - 2022-09-18
+
+### What's Changed
+
+- improve responsive layout by @atmonshi in https://github.com/lara-zeus/core/pull/24
+
+**Full Changelog**: https://github.com/lara-zeus/core/compare/2.3.1...2.3.2
+
 ## 2.3.1 - 2022-09-17
 
 ### What's Changed
@@ -29,11 +37,13 @@ All notable changes to `zeus` will be documented in this file
 php artisan vendor:publish --tag=zeus-assets
 
 
+
 ```
 the same for the views, backup your changes and republish them:
 
 ```bash
 php artisan vendor:publish --tag=zeus-views
+
 
 
 ```
