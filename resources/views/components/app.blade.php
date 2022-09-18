@@ -27,29 +27,29 @@
 
 <header x-data="{ open: false }" class="bg-white dark:bg-black px-4">
     <div class="container mx-auto">
-            <div class="flex justify-between h-16">
-                <div class="flex">
-                    <div class="flex-shrink-0 flex items-center">
-                        <a class="italic flex gap-2 group" href="{{ url('/') }}">
-                            <img class="w-7" src="https://larazeus.com/images/zeus-logo.png" alt="{{ config('zeus.wind.name', config('app.name', 'Laravel')) }}">
-                            @zeus
-                        </a>
-                    </div>
-
-                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                        {{--Navigation Links--}}
-                    </div>
-
+        <div class="flex justify-between h-16">
+            <div class="flex">
+                <div class="flex-shrink-0 flex items-center">
+                    <a class="italic flex gap-2 group" href="{{ url('/') }}">
+                        <img class="w-7" src="https://larazeus.com/images/zeus-logo.png" alt="{{ config('zeus.wind.name', config('app.name', 'Laravel')) }}">
+                        @zeus
+                    </a>
                 </div>
-                <div class="hidden sm:flex sm:items-center sm:ml-6">
-                    {{--Account menu and other icons--}}
+
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    {{--Navigation Links--}}
                 </div>
+
+            </div>
+            <div class="hidden sm:flex sm:items-center sm:ml-6">
+                {{--Account menu and other icons--}}
             </div>
         </div>
+    </div>
 </header>
 
 @if(isset($header) || isset($breadcrumps))
-    <header class="bg-gray-100 dark:bg-gray-800">
+    <div class="bg-gray-100 dark:bg-gray-800">
         <div class="container mx-auto py-2 px-3">
 
             @if(isset($header))
@@ -71,7 +71,7 @@
             @endif
 
         </div>
-    </header>
+    </div>
 @endif
 
 <div class="container mx-auto">
