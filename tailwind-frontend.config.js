@@ -8,17 +8,19 @@ module.exports = {
         '../sky/resources/views/themes/**/*.blade.php',
         '../bolt/resources/views/themes/**/*.blade.php',
         '../thunder/resources/views/themes/**/*.blade.php',
-        '../../vendor/filament/**/*.blade.php',
+        '../thunder/resources/views/filament/**/*.blade.php',
+        '../thunder/src/Models/TicketsStatus.php',
+        './vendor/filament/**/*.blade.php',
     ],
     theme: {
         extend: {
             colors: {
                 gray: colors.stone,
                 primary: colors.emerald,
-                green: colors.emerald,
+                green: colors.green,
                 secondary: colors.yellow,
                 danger: colors.rose,
-                success: colors.emerald,
+                success: colors.green,
                 warning: colors.yellow,
                 info: colors.blue,
                 emerald: {
