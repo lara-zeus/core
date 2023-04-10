@@ -2,6 +2,14 @@
 
 All notable changes to `zeus` will be documented in this file
 
+## 2.4.1 - 2023-04-10
+
+### What's Changed
+
+- Update composer.lock by @atmonshi in https://github.com/lara-zeus/core/pull/37
+
+**Full Changelog**: https://github.com/lara-zeus/core/compare/2.4.0...2.4.1
+
 ## 2.4.0 - 2023-04-10
 
 ### What's Changed
@@ -81,11 +89,13 @@ php artisan vendor:publish --tag=zeus-assets
 
 
 
+
 ```
 the same for the views, backup your changes and republish them:
 
 ```bash
 php artisan vendor:publish --tag=zeus-views
+
 
 
 
