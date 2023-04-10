@@ -2,6 +2,18 @@
 
 All notable changes to `zeus` will be documented in this file
 
+## 2.4.0 - 2023-04-10
+
+### What's Changed
+
+- Bump loader-utils from 1.4.0 to 1.4.2 by @dependabot in https://github.com/lara-zeus/core/pull/29
+- Bump dependabot/fetch-metadata from 1.3.5 to 1.3.6 by @dependabot in https://github.com/lara-zeus/core/pull/32
+- Bump aglipanci/laravel-pint-action from 1.0.0 to 2.2.0 by @dependabot in https://github.com/lara-zeus/core/pull/34
+- Bump ramsey/composer-install from 1 to 2 by @dependabot in https://github.com/lara-zeus/core/pull/30
+- support laravel 10 by @atmonshi in https://github.com/lara-zeus/core/pull/36
+
+**Full Changelog**: https://github.com/lara-zeus/core/compare/2.3.4...2.4.0
+
 ## 2.3.4 - 2022-11-11
 
 ### What's Changed
@@ -68,11 +80,13 @@ php artisan vendor:publish --tag=zeus-assets
 
 
 
+
 ```
 the same for the views, backup your changes and republish them:
 
 ```bash
 php artisan vendor:publish --tag=zeus-views
+
 
 
 
