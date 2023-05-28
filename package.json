@@ -2,25 +2,26 @@
   "private": true,
   "scripts": {
     "dev": "npm run development",
-    "development": "mix",
-    "watch": "mix watch",
+    "development": "mix && filament-purge -i resources/dist/filament-tail.css -o resources/dist/filament.css",
+    "watch": "mix watch && filament-purge -i resources/dist/filament-tail.css -o resources/dist/filament.css",
     "watch-poll": "mix watch -- --watch-options-poll=1000",
     "hot": "mix watch --hot",
     "prod": "npm run production",
-    "production": "mix --production"
+    "production": "mix --production && filament-purge -i resources/dist/filament-tail.css -o resources/dist/filament.css"
   },
   "devDependencies": {
     "@alpinejs/collapse": "^3.12.0",
     "@alpinejs/focus": "^3.12.0",
+    "@awcodes/filament-plugin-purge": "^1.1.0",
     "@ryangjchandler/alpine-tooltip": "^1.2.0",
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/typography": "^0.5.9",
     "alpinejs": "^3.12.0",
     "autoprefixer": "^10.4.14",
     "laravel-mix": "^6.0.49",
-    "postcss": "^8.4.23",
+    "postcss": "^8.4.24",
     "postcss-import": "^15.1.0",
-    "tailwindcss": "^3.3.1",
+    "tailwindcss": "^3.3.2",
     "tailwindcss-debug-screens": "^2.2.1",
     "tippy.js": "^6.3.7"
   }

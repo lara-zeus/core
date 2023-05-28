@@ -5,7 +5,7 @@ mix
     .js('resources/js/app.js', 'dist')
     .js('resources/js/filament.js', 'dist')
 
-    .postCss('resources/css/filament.css', 'dist', [
+    .postCss('resources/css/filament.css', 'dist/filament-tail.css', [
         require('postcss-import'),
         tailwindcss("./tailwind-filament.config.js"),
     ])
@@ -23,3 +23,5 @@ if (mix.inProduction()) {
 } else {
     mix.copy('resources/dist', '../demo/public/vendor/zeus')
 }
+
+//npx filament-purge -i resources/dist/filament-tail.css -o resources/dist/filament.css
