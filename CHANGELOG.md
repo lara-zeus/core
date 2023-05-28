@@ -2,6 +2,14 @@
 
 All notable changes to `zeus` will be documented in this file
 
+## 2.4.4 - 2023-05-28
+
+### What's Changed
+
+- remove unused route link by @atmonshi in https://github.com/lara-zeus/core/pull/41
+
+**Full Changelog**: https://github.com/lara-zeus/core/compare/2.4.3...2.4.4
+
 ## 2.4.3 - 2023-05-20
 
 ### What's Changed
@@ -113,11 +121,13 @@ php artisan vendor:publish --tag=zeus-assets
 
 
 
+
 ```
 the same for the views, backup your changes and republish them:
 
 ```bash
 php artisan vendor:publish --tag=zeus-views
+
 
 
 
