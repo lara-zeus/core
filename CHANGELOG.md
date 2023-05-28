@@ -2,6 +2,16 @@
 
 All notable changes to `zeus` will be documented in this file
 
+## 2.4.5 - 2023-05-28
+
+### What's Changed
+
+🔥 Adding `Filament Plugin Purge` for better and thinner CSS file.
+🚩 The component `<x-zeus::box>` is retired, and now we using `<x-filament::card>` instead.
+🟢 Always add `@php artisan vendor:publish --tag=zeus-assets --ansi --force` to `post-update-cmd` in your composer file.
+
+**Full Changelog**: https://github.com/lara-zeus/core/compare/2.4.4...2.4.5
+
 ## 2.4.4 - 2023-05-28
 
 ### What's Changed
@@ -122,11 +132,13 @@ php artisan vendor:publish --tag=zeus-assets
 
 
 
+
 ```
 the same for the views, backup your changes and republish them:
 
 ```bash
 php artisan vendor:publish --tag=zeus-views
+
 
 
 
