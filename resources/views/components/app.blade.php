@@ -62,7 +62,7 @@
                 <nav class="text-gray-400 font-bold my-2" aria-label="Breadcrumb">
                     <ol class="list-none p-0 inline-flex">
                         <li class="flex items-center">
-                            <a href="{{ route('blogs') }}">Home</a>
+                            <a href="{{ url('/') }}">Home</a>
                             <x-iconpark-rightsmall-o class="fill-current w-4 h-4 mx-3" />
                         </li>
                         {{ $breadcrumps }}
