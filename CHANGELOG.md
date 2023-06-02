@@ -2,6 +2,16 @@
 
 All notable changes to `zeus` will be documented in this file
 
+## 2.4.6 - 2023-06-02
+
+### What's Changed
+
+- Bump dependabot/fetch-metadata from 1.4.0 to 1.5.1 by @dependabot in https://github.com/lara-zeus/core/pull/43
+- Bump aglipanci/laravel-pint-action from 2.2.0 to 2.3.0 by @dependabot in https://github.com/lara-zeus/core/pull/44
+- composer and assets update
+
+**Full Changelog**: https://github.com/lara-zeus/core/compare/2.4.5...2.4.6
+
 ## 2.4.5 - 2023-05-28
 
 ### What's Changed
@@ -133,11 +143,13 @@ php artisan vendor:publish --tag=zeus-assets
 
 
 
+
 ```
 the same for the views, backup your changes and republish them:
 
 ```bash
 php artisan vendor:publish --tag=zeus-views
+
 
 
 
