@@ -2,6 +2,14 @@
 
 All notable changes to `zeus` will be documented in this file
 
+## 2.4.7 - 2023-06-04
+
+### What's Changed
+
+- small improvements by @atmonshi in https://github.com/lara-zeus/core/pull/45
+
+**Full Changelog**: https://github.com/lara-zeus/core/compare/2.4.6...2.4.7
+
 ## 2.4.6 - 2023-06-02
 
 ### What's Changed
@@ -144,11 +152,13 @@ php artisan vendor:publish --tag=zeus-assets
 
 
 
+
 ```
 the same for the views, backup your changes and republish them:
 
 ```bash
 php artisan vendor:publish --tag=zeus-views
+
 
 
 
