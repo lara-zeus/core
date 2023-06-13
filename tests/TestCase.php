@@ -3,7 +3,6 @@
 namespace LaraZeus\Core\Tests;
 
 use Filament\FilamentServiceProvider;
-use Illuminate\Database\Eloquent\Factories\Factory;
 use LaraZeus\Core\CoreServiceProvider;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
