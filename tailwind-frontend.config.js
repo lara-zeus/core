@@ -9,6 +9,7 @@ module.exports = {
         '../wind/resources/views/themes/**/*.blade.php',
         // Rain
         '../rain/resources/views/themes/**/*.blade.php',
+        '../rain/src/Models/Columns.php',
         // Sky
         '../sky/resources/views/themes/**/*.blade.php',
         // Bolt
