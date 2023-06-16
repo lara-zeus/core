@@ -14,4 +14,5 @@ Alpine.plugin(Tooltip);
 Alpine.plugin(Collapse)
 
 window.Alpine = Alpine
-window.Alpine.start();
+
+Alpine.start()

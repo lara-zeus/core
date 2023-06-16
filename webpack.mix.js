@@ -22,6 +22,5 @@ if (mix.inProduction()) {
     mix.version();
 } else {
     mix.copy('resources/dist', '../demo/public/vendor/zeus')
+    mix.copy('resources/dist', '../zeus/public/vendor/zeus')
 }
-
-//npx filament-purge -i resources/dist/filament-tail.css -o resources/dist/filament.css
