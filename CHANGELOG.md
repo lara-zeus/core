@@ -2,6 +2,15 @@
 
 All notable changes to `zeus` will be documented in this file
 
+## 2.4.11 - 2023-06-16
+
+### What's Changed
+
+- update to rain by @atmonshi in https://github.com/lara-zeus/core/pull/49
+- Update the CSS to include some classes for our newest package [Zeus Rain](https://github.com/lara-zeus/rain)
+
+**Full Changelog**: https://github.com/lara-zeus/core/compare/2.4.10...2.4.11
+
 ## 2.4.10 - 2023-06-13
 
 ### What's Changed
@@ -180,11 +189,13 @@ php artisan vendor:publish --tag=zeus-assets
 
 
 
+
 ```
 the same for the views, backup your changes and republish them:
 
 ```bash
 php artisan vendor:publish --tag=zeus-views
+
 
 
 
