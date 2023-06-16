@@ -2,6 +2,18 @@
 
 All notable changes to `zeus` will be documented in this file
 
+## 2.4.13 - 2023-06-16
+
+### What's Changed
+
+- Update assets and compile for prod, composer update by @atmonshi in https://github.com/lara-zeus/core/pull/51
+
+always add the following to your composer `post-update-cmd` to ensure your assets up-to-date:
+
+`"@php artisan vendor:publish --tag=zeus-assets --ansi --force"`
+
+**Full Changelog**: https://github.com/lara-zeus/core/compare/2.4.12...2.4.13
+
 ## 2.4.12 - 2023-06-16
 
 ### What's Changed
@@ -199,11 +211,13 @@ php artisan vendor:publish --tag=zeus-assets
 
 
 
+
 ```
 the same for the views, backup your changes and republish them:
 
 ```bash
 php artisan vendor:publish --tag=zeus-views
+
 
 
 
