@@ -1,5 +1,3 @@
-<h1 align="center">Lara Zeus Core</h1>
-
 <p align="center">
 <a href="https://larazeus.com"><img src="https://larazeus.com/images/core-banner.png" /></a>
 </p>
@@ -15,7 +13,9 @@
 
 </p>
 
-thia is the main UI core, and blade files for all lara-zeus packages
+<h1 align="center">Lara Zeus Core</h1>
+
+thia is the main UI core, and blade components for all lara-zeus packages
 >small tasks can be time-consuming, let us build these for you,
 
 ## Support Filament
@@ -24,11 +24,11 @@ thia is the main UI core, and blade files for all lara-zeus packages
 <img width="320" alt="filament-logo" src="https://filamentadmin.com/images/sponsor-banner.jpg">
 </a>
 
-## why this a seperate package
+## Why this a separate package
 we have many packages, some are already published, and more in the way.
-so it make sense to seprate the assets and the defualt layots we useing in our packages.
+so it make sense to separate the assets and the default layouts we're using in our packages.
 
-## can I customize these views
+## Can I customize these views
 Yes of course, you can customize the blade files, and make your own themes
 
 #### to publish the views
@@ -39,3 +39,6 @@ php artisan vendor:publish --tag=zeus-views
 ```bash
 php artisan vendor:publish --tag=zeus-assets
 ```
+
+## More Info
+check our packages at [Larazeus](https://larazeus.com/) website
