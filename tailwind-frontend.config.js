@@ -20,6 +20,7 @@ module.exports = {
         '../rain/src/Models/Columns.php',
         // filament
         './vendor/filament/**/*.blade.php',
+        './src/CoreServiceProvider.php',
     ],
     theme: {
         extend: {
