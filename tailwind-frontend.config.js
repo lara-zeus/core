@@ -17,6 +17,7 @@ module.exports = {
         '../thunder/src/Models/TicketsStatus.php',
         // Rain
         '../rain/resources/views/themes/**/*.blade.php',
+        '../rain/src/Models/Columns.php',
         // filament
         './vendor/filament/**/*.blade.php',
     ],
