@@ -3,7 +3,6 @@
 namespace LaraZeus\Core;
 
 use Filament\PluginServiceProvider;
-use Illuminate\Support\Facades\Blade;
 use Spatie\LaravelPackageTools\Package;
 
 class CoreServiceProvider extends PluginServiceProvider
@@ -18,21 +17,9 @@ class CoreServiceProvider extends PluginServiceProvider
         'zeus-filament' => __DIR__ . '/../resources/dist/filament.js',
     ];
 
-    public function boot(): CoreServiceProvider
-    {
-        // let me have my fun 🤷🏽‍
-        Blade::directive('zeus', function () {
-            return view('zeus::zeus');
-        });
-
-        return parent::boot();
-    }
-
     public function configurePackage(Package $package): void
     {
         parent::configurePackage($package);
-        $package
-            ->hasAssets()
-            ->hasViews();
+        $package->hasAssets();
     }
 }
