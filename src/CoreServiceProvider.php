@@ -22,7 +22,6 @@ class CoreServiceProvider extends PluginServiceProvider
     {
         // let me have my fun 🤷🏽‍
         Blade::directive('zeus', function () {
-            /** @phpstan-ignore-next-line */
             return view('zeus::zeus');
         });
 
