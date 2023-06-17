@@ -26,7 +26,7 @@ module.exports = {
         extend: {
             colors: {
                 gray: colors.stone,
-                primary: colors.emerald,
+                primary: colors.pink,
                 secondary: colors.yellow,
                 danger: colors.red,
                 success: colors.green,
