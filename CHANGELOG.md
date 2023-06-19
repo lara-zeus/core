@@ -2,6 +2,14 @@
 
 All notable changes to `zeus` will be documented in this file
 
+## 2.4.16 - 2023-06-19
+
+### What's Changed
+
+- Fix primary color by @atmonshi in https://github.com/lara-zeus/core/pull/54
+
+**Full Changelog**: https://github.com/lara-zeus/core/compare/2.4.15...2.4.16
+
 ## 2.4.15 - 2023-06-17
 
 ### What's Changed
@@ -230,11 +238,13 @@ php artisan vendor:publish --tag=zeus-assets
 
 
 
+
 ```
 the same for the views, backup your changes and republish them:
 
 ```bash
 php artisan vendor:publish --tag=zeus-views
+
 
 
 
