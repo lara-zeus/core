@@ -8,6 +8,8 @@ module.exports = {
         '../wind/resources/views/filament/**/*.blade.php',
         // Rain
         '../rain/resources/views/filament/**/*.blade.php',
+        // Rhea
+        '../rain/resources/views/**/*.blade.php',
         // Sky
         '../sky/resources/views/filament/**/*.blade.php',
         '../sky/src/Models/PostStatus.php',
