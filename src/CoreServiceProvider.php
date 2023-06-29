@@ -3,21 +3,21 @@
 namespace LaraZeus\Core;
 
 use Filament\PluginServiceProvider;
-use Illuminate\Support\Facades\Blade;
-use Spatie\LaravelPackageTools\Package;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\View;
+use Spatie\LaravelPackageTools\Package;
 
 class CoreServiceProvider extends PluginServiceProvider
 {
     public static string $name = 'zeus';
 
     protected array $styles = [
-        'zeus-filament' => __DIR__.'/../resources/dist/filament.css',
+        'zeus-filament' => __DIR__ . '/../resources/dist/filament.css',
     ];
 
     protected array $scripts = [
-        'zeus-filament' => __DIR__.'/../resources/dist/filament.js',
+        'zeus-filament' => __DIR__ . '/../resources/dist/filament.js',
     ];
 
     public function boot(): CoreServiceProvider
@@ -28,9 +28,9 @@ class CoreServiceProvider extends PluginServiceProvider
         });
 
         CoreServiceProvider::setThemePath('');
-        View::share('theme', 'zeus::themes.'.config('zeus.theme', 'zeus'));
+        View::share('theme', 'zeus::themes.' . config('zeus.theme', 'zeus'));
         App::singleton('theme', function () {
-            return 'zeus::themes.'.config('zeus.theme', 'zeus');
+            return 'zeus::themes.' . config('zeus.theme', 'zeus');
         });
 
         return parent::boot();
@@ -45,9 +45,9 @@ class CoreServiceProvider extends PluginServiceProvider
 
     public static function setThemePath($path): void
     {
-        $viewPath = 'zeus::themes.'.config('zeus-'.$path.'.theme').'.'.$path;
-        View::share($path.'Theme', $viewPath);
-        App::singleton($path.'Theme', function () use ($viewPath) {
+        $viewPath = 'zeus::themes.' . config('zeus-' . $path . '.theme') . '.' . $path;
+        View::share($path . 'Theme', $viewPath);
+        App::singleton($path . 'Theme', function () use ($viewPath) {
             return $viewPath;
         });
     }
