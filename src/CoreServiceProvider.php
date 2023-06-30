@@ -20,7 +20,7 @@ class CoreServiceProvider extends PluginServiceProvider
         'zeus-filament' => __DIR__.'/../resources/dist/filament.js',
     ];
 
-    public function boot(): CoreServiceProvider
+    public function bootingPackage(): void
     {
         // let me have my fun 🤷🏽‍
         Blade::directive('zeus', function () {
@@ -28,12 +28,11 @@ class CoreServiceProvider extends PluginServiceProvider
         });
 
         CoreServiceProvider::setThemePath('');
+
         View::share('theme', 'zeus::themes.'.config('zeus.theme', 'zeus'));
         App::singleton('theme', function () {
             return 'zeus::themes.'.config('zeus.theme', 'zeus');
         });
-
-        return parent::boot();
     }
 
     public function packageConfigured(Package $package): void
@@ -45,7 +44,7 @@ class CoreServiceProvider extends PluginServiceProvider
 
     public static function setThemePath($path): void
     {
-        $viewPath = 'zeus::themes.'.config('zeus-'.$path.'.theme').'.'.$path;
+        $viewPath = 'zeus::themes.'.config('zeus.theme').'.'.$path;
         View::share($path.'Theme', $viewPath);
         App::singleton($path.'Theme', function () use ($viewPath) {
             return $viewPath;
