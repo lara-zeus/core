@@ -3,21 +3,21 @@
 namespace LaraZeus\Core;
 
 use Filament\PluginServiceProvider;
-use Illuminate\Support\Facades\Blade;
-use Spatie\LaravelPackageTools\Package;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\View;
+use Spatie\LaravelPackageTools\Package;
 
 class CoreServiceProvider extends PluginServiceProvider
 {
     public static string $name = 'zeus';
 
     protected array $styles = [
-        'zeus-filament' => __DIR__.'/../resources/dist/filament.css',
+        'zeus-filament' => __DIR__ . '/../resources/dist/filament.css',
     ];
 
     protected array $scripts = [
-        'zeus-filament' => __DIR__.'/../resources/dist/filament.js',
+        'zeus-filament' => __DIR__ . '/../resources/dist/filament.js',
     ];
 
     public function bootingPackage(): void
@@ -27,11 +27,11 @@ class CoreServiceProvider extends PluginServiceProvider
             return '<span class="text-secondary-700 group"><span class="font-semibold text-primary-600 group-hover:text-secondary-500 transition ease-in-out duration-300">Lara&nbsp;<span class="line-through italic text-secondary-500 group-hover:text-primary-600 transition ease-in-out duration-300">Z</span>eus</span></span>';
         });
 
-        CoreServiceProvider::setThemePath('');
+        self::setThemePath('');
 
         View::share('theme', 'zeus::themes.'.config('zeus.theme', 'zeus'));
         App::singleton('theme', function () {
-            return 'zeus::themes.'.config('zeus.theme', 'zeus');
+            return 'zeus::themes.' . config('zeus.theme', 'zeus');
         });
     }
 
