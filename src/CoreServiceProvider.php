@@ -29,7 +29,7 @@ class CoreServiceProvider extends PluginServiceProvider
 
         self::setThemePath('');
 
-        View::share('theme', 'zeus::themes.'.config('zeus.theme', 'zeus'));
+        View::share('theme', 'zeus::themes.' . config('zeus.theme', 'zeus'));
         App::singleton('theme', function () {
             return 'zeus::themes.' . config('zeus.theme', 'zeus');
         });
@@ -44,9 +44,9 @@ class CoreServiceProvider extends PluginServiceProvider
 
     public static function setThemePath($path): void
     {
-        $viewPath = 'zeus::themes.'.config('zeus.theme').'.'.$path;
-        View::share($path.'Theme', $viewPath);
-        App::singleton($path.'Theme', function () use ($viewPath) {
+        $viewPath = 'zeus::themes.' . config('zeus.theme') . '.' . $path;
+        View::share($path . 'Theme', $viewPath);
+        App::singleton($path . 'Theme', function () use ($viewPath) {
             return $viewPath;
         });
     }
