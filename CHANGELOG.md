@@ -2,6 +2,15 @@
 
 All notable changes to `zeus` will be documented in this file
 
+## 2.4.19 - 2023-07-04
+
+### What's Changed
+
+- Bump dependabot/fetch-metadata from 1.5.1 to 1.6.0 by @dependabot in https://github.com/lara-zeus/core/pull/57
+- update all by @atmonshi in https://github.com/lara-zeus/core/pull/58
+
+**Full Changelog**: https://github.com/lara-zeus/core/compare/2.4.18...2.4.19
+
 ## 2.4.18 - 2023-06-30
 
 ### What's Changed
@@ -257,11 +266,13 @@ php artisan vendor:publish --tag=zeus-assets
 
 
 
+
 ```
 the same for the views, backup your changes and republish them:
 
 ```bash
 php artisan vendor:publish --tag=zeus-views
+
 
 
 
