@@ -1,6 +1,6 @@
 import Alpine from 'alpinejs'
-import FormsAlpinePlugin from '../../vendor/filament/forms/dist/module.esm'
-import NotificationsAlpinePlugin from '../../vendor/filament/notifications/dist/module.esm'
+import FormsAlpinePlugin from '../../vendor/filament/forms/dist/index.js'
+import NotificationsAlpinePlugin from '../../vendor/filament/notifications/dist/index.js'
 import focus from '@alpinejs/focus'
 import tippy from 'tippy.js';
 import 'tippy.js/dist/tippy.css'; // optional for styling

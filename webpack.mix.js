@@ -5,7 +5,7 @@ mix
     .js('resources/js/app.js', 'dist')
     .js('resources/js/filament.js', 'dist')
 
-    .postCss('resources/css/filament.css', 'dist/filament-tail.css', [
+    .postCss('resources/css/filament/filament.css', 'dist/filament-tail.css', [
         require('postcss-import'),
         tailwindcss("./tailwind-filament.config.js"),
     ])
@@ -23,4 +23,5 @@ if (mix.inProduction()) {
 } else {
     mix.copy('resources/dist', '../demo/public/vendor/zeus')
     mix.copy('resources/dist', '../zeus/public/vendor/zeus')
+    mix.copy('resources/dist', '../v3/public/vendor/zeus')
 }

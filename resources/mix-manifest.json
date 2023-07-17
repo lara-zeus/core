@@ -1,6 +1,24 @@
 {
-    "/dist/app.js": "/dist/app.js?id=6aa384e8f63932c17b1b65f90e9d2703",
-    "/dist/filament.js": "/dist/filament.js?id=452d0342fa4df097708c907add9744f0",
-    "/dist/frontend.css": "/dist/frontend.css?id=474ca91f1462d38605881b92378c2afb",
-    "/dist/filament-tail.css": "/dist/filament-tail.css?id=ebfa0d35c1f94715990227ce8e370e05"
+    "/dist/app.js": "/dist/app.js",
+    "/dist/filament.js": "/dist/filament.js",
+    "/dist/frontend.css": "/dist/frontend.css",
+    "/dist/filament-tail.css": "/dist/filament-tail.css",
+    "/demo/public/vendor/zeus/app.js": "/demo/public/vendor/zeus/app.js",
+    "/demo/public/vendor/zeus/app.js.LICENSE.txt": "/demo/public/vendor/zeus/app.js.LICENSE.txt",
+    "/demo/public/vendor/zeus/filament-tail.css": "/demo/public/vendor/zeus/filament-tail.css",
+    "/demo/public/vendor/zeus/filament.css": "/demo/public/vendor/zeus/filament.css",
+    "/demo/public/vendor/zeus/filament.js": "/demo/public/vendor/zeus/filament.js",
+    "/demo/public/vendor/zeus/frontend.css": "/demo/public/vendor/zeus/frontend.css",
+    "/zeus/public/vendor/zeus/app.js": "/zeus/public/vendor/zeus/app.js",
+    "/zeus/public/vendor/zeus/app.js.LICENSE.txt": "/zeus/public/vendor/zeus/app.js.LICENSE.txt",
+    "/zeus/public/vendor/zeus/filament-tail.css": "/zeus/public/vendor/zeus/filament-tail.css",
+    "/zeus/public/vendor/zeus/filament.css": "/zeus/public/vendor/zeus/filament.css",
+    "/zeus/public/vendor/zeus/filament.js": "/zeus/public/vendor/zeus/filament.js",
+    "/zeus/public/vendor/zeus/frontend.css": "/zeus/public/vendor/zeus/frontend.css",
+    "/v3/public/vendor/zeus/app.js": "/v3/public/vendor/zeus/app.js",
+    "/v3/public/vendor/zeus/app.js.LICENSE.txt": "/v3/public/vendor/zeus/app.js.LICENSE.txt",
+    "/v3/public/vendor/zeus/filament-tail.css": "/v3/public/vendor/zeus/filament-tail.css",
+    "/v3/public/vendor/zeus/filament.css": "/v3/public/vendor/zeus/filament.css",
+    "/v3/public/vendor/zeus/filament.js": "/v3/public/vendor/zeus/filament.js",
+    "/v3/public/vendor/zeus/frontend.css": "/v3/public/vendor/zeus/frontend.css"
 }
