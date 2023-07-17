@@ -1,6 +1,8 @@
-const colors = require("tailwindcss/colors");
+import preset from './vendor/filament/filament/tailwind.config.preset'
+import colors from 'tailwindcss/colors'
+
 module.exports = {
-    darkMode: 'class',
+    presets: [preset],
     content: [
             // Core
             './resources/views/**/*.blade.php',
@@ -24,24 +26,12 @@ module.exports = {
             colors: {
                 gray: colors.stone,
                 primary: colors.emerald,
-                green: colors.green,
+                custom: colors.emerald,
                 secondary: colors.yellow,
                 danger: colors.rose,
                 success: colors.green,
                 warning: colors.yellow,
                 info: colors.blue,
-                emerald: {
-                    50: "#d1fae5",
-                    100: "#a7f3d0",
-                    200: "#6ee7b7",
-                    300: "#34d399",
-                    400: "#10b981",
-                    600: "#059669",
-                    500: "#059669",
-                    700: "#047857",
-                    800: "#065f46",
-                    900: "#064e3b",
-                },
             }
         },
     },

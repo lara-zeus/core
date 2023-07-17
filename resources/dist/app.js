@@ -5122,10 +5122,10 @@ module.exports = function (cssWithMappingToString) {
 
 /***/ }),
 
-/***/ "./resources/css/filament/filament.css":
-/*!*********************************************!*\
-  !*** ./resources/css/filament/filament.css ***!
-  \*********************************************/
+/***/ "./resources/css/filament.css":
+/*!************************************!*\
+  !*** ./resources/css/filament.css ***!
+  \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -9110,7 +9110,7 @@ var module_default = src_default;
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
 /******/ 	__webpack_require__.O(undefined, ["dist/frontend","dist/filament-tail"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["dist/frontend","dist/filament-tail"], () => (__webpack_require__("./resources/css/filament/filament.css")))
+/******/ 	__webpack_require__.O(undefined, ["dist/frontend","dist/filament-tail"], () => (__webpack_require__("./resources/css/filament.css")))
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["dist/frontend","dist/filament-tail"], () => (__webpack_require__("./resources/css/frontend.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	

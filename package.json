@@ -2,12 +2,12 @@
   "private": true,
   "scripts": {
     "dev": "npm run development",
-    "development": "mix && filament-purge -i resources/dist/filament-tail.css -o resources/dist/filament.css",
-    "watch": "mix watch && filament-purge -i resources/dist/filament-tail.css -o resources/dist/filament.css",
+    "development": "mix ",
+    "watch": "mix watch ",
     "watch-poll": "mix watch -- --watch-options-poll=1000",
     "hot": "mix watch --hot",
     "prod": "npm run production",
-    "production": "mix --production && filament-purge -i resources/dist/filament-tail.css -o resources/dist/filament.css"
+    "production": "mix --production "
   },
   "devDependencies": {
     "@alpinejs/collapse": "^3.12.0",

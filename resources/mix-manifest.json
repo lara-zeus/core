@@ -20,5 +20,11 @@
     "/v3/public/vendor/zeus/filament-tail.css": "/v3/public/vendor/zeus/filament-tail.css",
     "/v3/public/vendor/zeus/filament.css": "/v3/public/vendor/zeus/filament.css",
     "/v3/public/vendor/zeus/filament.js": "/v3/public/vendor/zeus/filament.js",
-    "/v3/public/vendor/zeus/frontend.css": "/v3/public/vendor/zeus/frontend.css"
+    "/v3/public/vendor/zeus/frontend.css": "/v3/public/vendor/zeus/frontend.css",
+    "/v3/public/css/lara-zeus/app.js": "/v3/public/css/lara-zeus/app.js",
+    "/v3/public/css/lara-zeus/app.js.LICENSE.txt": "/v3/public/css/lara-zeus/app.js.LICENSE.txt",
+    "/v3/public/css/lara-zeus/filament-tail.css": "/v3/public/css/lara-zeus/filament-tail.css",
+    "/v3/public/css/lara-zeus/filament.css": "/v3/public/css/lara-zeus/filament.css",
+    "/v3/public/css/lara-zeus/filament.js": "/v3/public/css/lara-zeus/filament.js",
+    "/v3/public/css/lara-zeus/frontend.css": "/v3/public/css/lara-zeus/frontend.css"
 }
