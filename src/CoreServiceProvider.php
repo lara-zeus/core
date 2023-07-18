@@ -19,10 +19,6 @@ class CoreServiceProvider extends PackageServiceProvider
             return '<span class="text-secondary-700 group"><span class="font-semibold text-primary-600 group-hover:text-secondary-500 transition ease-in-out duration-300">Lara&nbsp;<span class="line-through italic text-secondary-500 group-hover:text-primary-600 transition ease-in-out duration-300">Z</span>eus</span></span>';
         });
 
-        self::setThemePath('zeus');
-
-        // http://v3.test/css/lara-zeus/core/core.css?v=3.9999999.9999999.9999999-dev
-        // http://v3.test/css/zeus/core/core.css?v=3.0.0.0-alpha129
         FilamentAsset::register([
             Css::make('filament', __DIR__ . '/../resources/dist/filament.css'),
         ], 'lara-zeus');
