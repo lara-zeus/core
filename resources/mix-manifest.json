@@ -2,7 +2,7 @@
     "/dist/app.js": "/dist/app.js",
     "/dist/filament.js": "/dist/filament.js",
     "/dist/frontend.css": "/dist/frontend.css",
-    "/dist/filament-tail.css": "/dist/filament-tail.css",
+    "/dist/filament.css": "/dist/filament.css",
     "/demo/public/vendor/zeus/app.js": "/demo/public/vendor/zeus/app.js",
     "/demo/public/vendor/zeus/app.js.LICENSE.txt": "/demo/public/vendor/zeus/app.js.LICENSE.txt",
     "/demo/public/vendor/zeus/filament-tail.css": "/demo/public/vendor/zeus/filament-tail.css",
@@ -23,7 +23,6 @@
     "/v3/public/vendor/zeus/frontend.css": "/v3/public/vendor/zeus/frontend.css",
     "/v3/public/css/lara-zeus/app.js": "/v3/public/css/lara-zeus/app.js",
     "/v3/public/css/lara-zeus/app.js.LICENSE.txt": "/v3/public/css/lara-zeus/app.js.LICENSE.txt",
-    "/v3/public/css/lara-zeus/filament-tail.css": "/v3/public/css/lara-zeus/filament-tail.css",
     "/v3/public/css/lara-zeus/filament.css": "/v3/public/css/lara-zeus/filament.css",
     "/v3/public/css/lara-zeus/filament.js": "/v3/public/css/lara-zeus/filament.js",
     "/v3/public/css/lara-zeus/frontend.css": "/v3/public/css/lara-zeus/frontend.css"

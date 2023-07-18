@@ -6,7 +6,7 @@ mix
     .js('resources/js/app.js', 'dist')
     .js('resources/js/filament.js', 'dist')
 
-    .postCss('resources/css/filament.css', 'dist/filament-tail.css', [
+    .postCss('resources/css/filament.css', 'dist/filament.css', [
         postcssImport,
         tailwindcss("./tailwind-filament.config.js"),
     ])
