@@ -3,7 +3,7 @@ const tailwindcss = require("tailwindcss");
 const postcssImport = require("postcss-import");
 
 mix
-    .js('resources/js/app.js', 'dist')
+    .js('resources/js/frontend.js', 'dist')
     .js('resources/js/filament.js', 'dist')
 
     .postCss('resources/css/filament.css', 'dist/filament.css', [
