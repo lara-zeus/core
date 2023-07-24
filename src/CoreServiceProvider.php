@@ -12,6 +12,8 @@ use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class CoreServiceProvider extends PackageServiceProvider
 {
+    public static string $name = 'zeus';
+
     public function packageBooted(): void
     {
         // let me have my fun 🤷🏽‍
@@ -20,25 +22,25 @@ class CoreServiceProvider extends PackageServiceProvider
         });
 
         FilamentAsset::register([
-            Css::make('filament', __DIR__ . '/../resources/dist/filament.css'),
+            Css::make('filament', __DIR__.'/../resources/dist/filament.css'),
         ], 'lara-zeus');
-    }
-
-    public static function setThemePath($path): void
-    {
-        $viewPath = 'zeus::themes.' . config('zeus.theme') . '.' . $path;
-        View::share($path . 'Theme', $viewPath);
-        App::singleton($path . 'Theme', function () use ($viewPath) {
-            return $viewPath;
-        });
     }
 
     public function configurePackage(Package $package): void
     {
         $package
-            ->name('zeus')
+            ->name(static::$name)
             ->hasAssets()
             ->hasConfigFile()
             ->hasViews('zeus');
+    }
+
+    public static function setThemePath($path): void
+    {
+        $viewPath = 'zeus::themes.'.config('zeus.theme').'.'.$path;
+        View::share($path.'Theme', $viewPath);
+        App::singleton($path.'Theme', function () use ($viewPath) {
+            return $viewPath;
+        });
     }
 }
