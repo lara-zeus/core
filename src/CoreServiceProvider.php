@@ -22,7 +22,7 @@ class CoreServiceProvider extends PackageServiceProvider
         });
 
         FilamentAsset::register([
-            Css::make('filament', __DIR__.'/../resources/dist/filament.css'),
+            Css::make('filament-lara-zeus', __DIR__.'/../resources/dist/lara-zeus.css'),
         ], 'lara-zeus');
     }
 

@@ -1,6 +1,4 @@
 {
-    "/dist/frontend.js": "/dist/frontend.js?id=694733c6e7a06c17f9bab6d58a9ac7a1",
-    "/dist/filament.js": "/dist/filament.js?id=d41d8cd98f00b204e9800998ecf8427e",
-    "/dist/frontend.css": "/dist/frontend.css?id=1431ecc40ff5eb9a3e60c57abf17b248",
-    "/dist/filament.css": "/dist/filament.css?id=408de50982da2779228ac481b9a7c7b7"
+    "/dist/frontend.css": "/dist/frontend.css?id=0ef67a09a7397f0f3fd228a9ca44cb90",
+    "/dist/filament-tail.css": "/dist/filament-tail.css?id=766a72ee2331b37d47b4e35c424672b1"
 }

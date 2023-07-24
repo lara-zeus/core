@@ -4,23 +4,24 @@ import colors from 'tailwindcss/colors'
 module.exports = {
     presets: [preset],
     content: [
-            // Core
-            './resources/views/**/*.blade.php',
-            // Wind
-            '../wind/resources/views/filament/**/*.blade.php',
-            // Rain
-            '../rain/resources/views/filament/**/*.blade.php',
-            '../rain/src/Models/Columns.php',
-            // Rhea
-            '../rhea/resources/views/**/*.blade.php',
-            // Sky
-            '../sky/resources/views/filament/**/*.blade.php',
-            '../sky/src/Models/PostStatus.php',
-            // Bolt
-            '../bolt/resources/views/filament/**/*.blade.php',
-            // Thunder
-            '../thunder/resources/views/**/*.blade.php',
-            '../thunder/src/Models/TicketsStatus.php',
+        // Core
+
+        // Wind
+        '../demo/vendor/lara-zeus/wind/src/Filament/Resources/LetterResource.php',
+
+        // Rain
+        '../rain/resources/views/filament/**/*.blade.php',
+        '../rain/src/Models/Columns.php',
+        // Rhea
+        '../rhea/resources/views/**/*.blade.php',
+        // Sky
+        '../sky/resources/views/filament/**/*.blade.php',
+        '../sky/src/Models/PostStatus.php',
+        // Bolt
+        '../bolt/resources/views/filament/**/*.blade.php',
+        // Thunder
+        '../thunder/resources/views/**/*.blade.php',
+        '../thunder/src/Models/TicketsStatus.php',
     ],
     theme: {
         extend: {

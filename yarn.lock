@@ -27,10 +27,10 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@awcodes/filament-plugin-purge@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@awcodes/filament-plugin-purge/-/filament-plugin-purge-1.1.0.tgz#cbf14a26a38c882ea171a2cc785c7611d6b43a7a"
-  integrity sha512-v1XsDQ3QO/W3OLOJgJFTnvnPS7tfpNjy6Dv/k5qZ9xc7vJbTu3kzSlAgFosxrqoNxTOKIXlhFdX0hhpPEfT+Fw==
+"@awcodes/filament-plugin-purge@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@awcodes/filament-plugin-purge/-/filament-plugin-purge-1.1.1.tgz#27ea16323ebe3a0346cbcc5e88832bad6aced096"
+  integrity sha512-dyoDnVnCZEh6kdG9bwVZxTLukISbDS91EtXlAq8wg8VJFJo7dIFgTMeXxsRpuZ9LTfwoHdMEbAX0w3G4Ouby6A==
   dependencies:
     axios "^1.4.0"
     chalk "^5.0.1"

@@ -3,10 +3,10 @@ const tailwindcss = require("tailwindcss");
 const postcssImport = require("postcss-import");
 
 mix
-    .js('resources/js/frontend.js', 'dist')
-    .js('resources/js/filament.js', 'dist')
+    //.js('resources/js/frontend.js', 'dist')
+    //.js('resources/js/filament.js', 'dist')
 
-    .postCss('resources/css/filament.css', 'dist/filament.css', [
+    .postCss('resources/css/filament.css', 'dist/filament-tail.css', [
         postcssImport,
         tailwindcss("./tailwind-filament.config.js"),
     ])
@@ -22,7 +22,7 @@ mix
 if (mix.inProduction()) {
     mix.version();
 } else {
-    mix.copy('resources/dist', '../demo/public/vendor/zeus')
+    mix.copy('resources/dist', '../demo/public/css/lara-zeus')
     mix.copy('resources/dist', '../zeus/public/vendor/zeus')
     mix.copy('resources/dist', '../v3/public/vendor/zeus')
     mix.copy('resources/dist', '../v3/public/css/lara-zeus')
