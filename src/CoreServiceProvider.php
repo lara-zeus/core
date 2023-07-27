@@ -18,7 +18,7 @@ class CoreServiceProvider extends PackageServiceProvider
     {
         // let me have my fun 🤷🏽‍
         Blade::directive('zeus', function () {
-            return '<span class="text-secondary-700 group"><span class="font-semibold text-primary-600 group-hover:text-secondary-500 transition ease-in-out duration-300">Lara&nbsp;<span class="line-through italic text-secondary-500 group-hover:text-primary-600 transition ease-in-out duration-300">Z</span>eus</span></span>';
+            return '<span class="text-custom-700 group"><span class="font-semibold text-primary-600 group-hover:text-custom-500 transition ease-in-out duration-300">Lara&nbsp;<span class="line-through italic text-custom-500 group-hover:text-primary-600 transition ease-in-out duration-300">Z</span>eus</span></span>';
         });
 
         FilamentAsset::register([
