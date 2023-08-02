@@ -19,12 +19,12 @@ return [
     /**
      * this will be set up the default seo site title. read more about it in 'laravel-seo'.
      */
-    'site_title' => config('app.name', 'Laravel') . ' | Blogs',
+    'site_title' => config('app.name', 'Laravel'),
 
     /**
      * this will be setup the default seo site description. read more about it in 'laravel-seo'.
      */
-    'site_description' => 'All about ' . config('app.name', 'Laravel') . ' Blogs',
+    'site_description' => 'All about ' . config('app.name', 'Laravel'),
 
     /**
      * Num of recent pages/posts displayed on frontend.
