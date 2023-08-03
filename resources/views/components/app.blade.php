@@ -88,8 +88,8 @@
 </footer>
 
 @stack('scripts')
-@filamentScripts
 @livewireScripts
+@filamentScripts
 @livewire('notifications')
 
 <script>
