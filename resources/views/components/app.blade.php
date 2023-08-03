@@ -11,12 +11,15 @@
     <x-seo::meta/>
     <!-- Seo Tags -->
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=KoHo:ital,wght@0,200;0,300;0,500;0,700;1,200;1,300;1,600;1,700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ asset('vendor/zeus/frontend.css') }}">
     @livewireStyles
+    @filamentStyles
     @stack('styles')
+
+    <link rel="stylesheet" href="{{ asset('vendor/zeus/frontend.css') }}">
 
     <style>
         * {font-family: 'KoHo', 'Almarai', sans-serif;}
@@ -84,9 +87,8 @@
     </a>
 </footer>
 
-<script src="{{ asset('vendor/zeus/frontend.js') }}" defer></script>
-@filamentScripts
 @stack('scripts')
+@filamentScripts
 @livewireScripts
 @livewire('notifications')
 
