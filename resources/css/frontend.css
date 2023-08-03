@@ -1,10 +1,6 @@
 @import '../../vendor/filament/filament/resources/css/theme.css';
 @import '_checkbox-cards.css';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* Sky search result highlight */
 span.highlight {
     @apply bg-primary-200 text-primary-700 px-2
