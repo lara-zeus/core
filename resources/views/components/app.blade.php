@@ -84,7 +84,6 @@
     </a>
 </footer>
 
-<script src="{{ asset('vendor/zeus/frontend.js') }}" defer></script>
 @filamentScripts
 @stack('scripts')
 @livewireScripts
