@@ -29,7 +29,7 @@ return [
     /**
      * Num of recent pages/posts displayed on frontend.
      */
-    'site_recent_count' => 5,
+    'site_recent_count' => 5, // todo move to sky
 
     /**
      * this will be setup the default seo site color theme. read more about it in 'laravel-seo'.
