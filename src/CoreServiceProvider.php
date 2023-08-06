@@ -5,12 +5,12 @@ namespace LaraZeus\Core;
 use Composer\InstalledVersions;
 use Filament\Support\Assets\Css;
 use Filament\Support\Facades\FilamentAsset;
+use Illuminate\Foundation\Console\AboutCommand;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\View;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Illuminate\Foundation\Console\AboutCommand;
 
 class CoreServiceProvider extends PackageServiceProvider
 {
@@ -18,8 +18,7 @@ class CoreServiceProvider extends PackageServiceProvider
 
     public function packageBooted(): void
     {
-        if (class_exists(AboutCommand::class) && class_exists(InstalledVersions::class))
-        {
+        if (class_exists(AboutCommand::class) && class_exists(InstalledVersions::class)) {
             $packages = [
                 'Sky',
                 'Wind',
@@ -28,10 +27,10 @@ class CoreServiceProvider extends PackageServiceProvider
                 'Rain',
                 'Rhea',
             ];
-            AboutCommand::add('Zeus', fn() => [
+            AboutCommand::add('Zeus', fn () => [
                 'Core Version' => InstalledVersions::getPrettyVersion('lara-zeus/core'),
                 'Packages' => collect($packages)
-                    ->filter(fn(string $package): bool => InstalledVersions::isInstalled("lara-zeus/{$package}"))
+                    ->filter(fn (string $package): bool => InstalledVersions::isInstalled("lara-zeus/{$package}"))
                     ->join(', '),
             ]);
         }
