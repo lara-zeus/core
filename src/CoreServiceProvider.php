@@ -20,12 +20,12 @@ class CoreServiceProvider extends PackageServiceProvider
     {
         if (class_exists(AboutCommand::class) && class_exists(InstalledVersions::class)) {
             $packages = [
-                'Sky',
-                'Wind',
-                'Bolt',
-                'Thunder',
-                'Rain',
-                'Rhea',
+                'sky',
+                'wind',
+                'bolt',
+                'thunder',
+                'rain',
+                'rhea',
             ];
             AboutCommand::add('Zeus', fn () => [
                 'Core Version' => InstalledVersions::getPrettyVersion('lara-zeus/core'),
