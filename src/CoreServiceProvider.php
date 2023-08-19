@@ -53,7 +53,7 @@ class CoreServiceProvider extends PackageServiceProvider
             ->hasViews('zeus');
     }
 
-    public static function setThemePath($path): void
+    public static function setThemePath(string $path): void
     {
         $viewPath = 'zeus::themes.' . config('zeus.theme') . '.' . $path;
         View::share($path . 'Theme', $viewPath);
