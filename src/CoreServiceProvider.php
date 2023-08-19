@@ -19,18 +19,18 @@ class CoreServiceProvider extends PackageServiceProvider
     public function packageBooted(): void
     {
         if (class_exists(AboutCommand::class) && class_exists(InstalledVersions::class)) {
-            $packages = [
+            $packages = collect([
                 'sky',
                 'wind',
                 'bolt',
                 'thunder',
                 'rain',
                 'rhea',
-            ];
-            AboutCommand::add('Zeus', fn () => [
+            ]);
+            AboutCommand::add('Zeus', fn() => [
                 'Core Version' => InstalledVersions::getPrettyVersion('lara-zeus/core'),
-                'Packages' => collect($packages)
-                    ->filter(fn (string $package): bool => InstalledVersions::isInstalled("lara-zeus/{$package}"))
+                'Packages' => $packages
+                    ->filter(fn(string $package): bool => InstalledVersions::isInstalled("lara-zeus/{$package}"))
                     ->join(', '),
             ]);
         }
@@ -40,7 +40,7 @@ class CoreServiceProvider extends PackageServiceProvider
         });
 
         FilamentAsset::register([
-            Css::make('filament-lara-zeus', __DIR__ . '/../resources/dist/lara-zeus.css'),
+            Css::make('filament-lara-zeus', __DIR__.'/../resources/dist/lara-zeus.css'),
         ], 'lara-zeus');
     }
 
@@ -55,9 +55,9 @@ class CoreServiceProvider extends PackageServiceProvider
 
     public static function setThemePath($path): void
     {
-        $viewPath = 'zeus::themes.' . config('zeus.theme') . '.' . $path;
-        View::share($path . 'Theme', $viewPath);
-        App::singleton($path . 'Theme', function () use ($viewPath) {
+        $viewPath = 'zeus::themes.'.config('zeus.theme').'.'.$path;
+        View::share($path.'Theme', $viewPath);
+        App::singleton($path.'Theme', function () use ($viewPath) {
             return $viewPath;
         });
     }
