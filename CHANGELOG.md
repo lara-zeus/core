@@ -2,6 +2,10 @@
 
 All notable changes to `zeus` will be documented in this file
 
+## v3.0.0 - 2023-08-19
+
+Finally 🚀 stable version
+
 ## 2.4.20 - 2023-07-12
 
 ### What's Changed
@@ -276,11 +280,13 @@ php artisan vendor:publish --tag=zeus-assets
 
 
 
+
 ```
 the same for the views, backup your changes and republish them:
 
 ```bash
 php artisan vendor:publish --tag=zeus-views
+
 
 
 
