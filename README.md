@@ -21,7 +21,7 @@ thia is the main UI core, and blade components for all lara-zeus packages
 ## Support Filament
 
 <a href="https://github.com/sponsors/danharrin">
-<img width="320" alt="filament-logo" src="https://filamentadmin.com/images/sponsor-banner.jpg">
+<img alt="filament-logo" src="https://larazeus.com/images/filament-sponsor-banner.png">
 </a>
 
 ## Why this a separate package
