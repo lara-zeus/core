@@ -4,25 +4,16 @@ import colors from 'tailwindcss/colors'
 module.exports = {
     presets: [preset],
     content: [
-        // Core
-
         // Wind
-        '../demo/vendor/lara-zeus/wind/src/Filament/Resources/LetterResource.php',
-
+        '../wind/src/Filament/Resources/LetterResource.php',
         // Sky
         '../sky/resources/views/filament/**/*.blade.php',
         '../sky/src/Models/PostStatus.php',
-
-
-
-
-
         // Rain
         '../rain/resources/views/filament/**/*.blade.php',
         '../rain/src/Models/Columns.php',
         // Rhea
         '../rhea/resources/views/**/*.blade.php',
-
         // Bolt
         '../bolt/resources/views/filament/**/*.blade.php',
         // Thunder

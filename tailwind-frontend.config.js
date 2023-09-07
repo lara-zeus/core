@@ -5,6 +5,7 @@ module.exports = {
     content: [
         // Core
         './resources/views/**/*.blade.php',
+        './src/CoreServiceProvider.php',
         // Wind
         '../wind/resources/views/themes/**/*.blade.php',
         // Sky
@@ -15,12 +16,13 @@ module.exports = {
         // Thunder
         '../thunder/resources/views/themes/**/*.blade.php',
         '../thunder/src/Models/TicketsStatus.php',
+        // hermes
+        '../hermes/resources/views/themes/**/*.blade.php',
         // Rain
         '../rain/resources/views/themes/**/*.blade.php',
         '../rain/src/Models/Columns.php',
         // filament
         './vendor/filament/**/*.blade.php',
-        './src/CoreServiceProvider.php',
     ],
     theme: {
         extend: {
