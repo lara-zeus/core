@@ -58,6 +58,11 @@ class CoreServiceProvider extends PackageServiceProvider
     public static function setThemePath(string $path): void
     {
         $viewPath = 'zeus::themes.' . config('zeus.theme') . '.' . $path;
+
+        if (! view()->exists($viewPath . '.home')) {
+            $viewPath = 'zeus::themes.zeus.' . $path;
+        }
+
         View::share($path . 'Theme', $viewPath);
         App::singleton($path . 'Theme', function () use ($viewPath) {
             return $viewPath;
