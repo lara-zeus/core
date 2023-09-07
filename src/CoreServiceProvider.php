@@ -59,7 +59,9 @@ class CoreServiceProvider extends PackageServiceProvider
     {
         $viewPath = 'zeus::themes.' . config('zeus.theme') . '.' . $path;
 
-        if (! view()->exists($viewPath . '.home')) {
+        $folder = resource_path('views/vendor/zeus/themes/' . config('zeus.theme') . '/' . $path);
+
+        if (! is_dir($folder)) {
             $viewPath = 'zeus::themes.zeus.' . $path;
         }
 
