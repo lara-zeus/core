@@ -31,8 +31,8 @@ class CoreServiceProvider extends PackageServiceProvider
                 'hermes',
                 'tyche',
             ])
-                ->filter(fn(string $package): bool => InstalledVersions::isInstalled("lara-zeus/{$package}"))
-                ->mapWithKeys(fn($package) => [$package => InstalledVersions::getPrettyVersion("lara-zeus/{$package}")])
+                ->filter(fn (string $package): bool => InstalledVersions::isInstalled("lara-zeus/{$package}"))
+                ->mapWithKeys(fn ($package) => [$package => InstalledVersions::getPrettyVersion("lara-zeus/{$package}")])
                 ->toArray();
 
             AboutCommand::add('Zeus ', $packages);
@@ -43,7 +43,7 @@ class CoreServiceProvider extends PackageServiceProvider
         });
 
         FilamentAsset::register([
-            Css::make('filament-lara-zeus', __DIR__.'/../resources/dist/lara-zeus.css'),
+            Css::make('filament-lara-zeus', __DIR__ . '/../resources/dist/lara-zeus.css'),
         ], 'lara-zeus');
     }
 
@@ -58,16 +58,16 @@ class CoreServiceProvider extends PackageServiceProvider
 
     public static function setThemePath(string $path): void
     {
-        $viewPath = 'zeus::themes.'.config('zeus.theme').'.'.$path;
+        $viewPath = 'zeus::themes.' . config('zeus.theme') . '.' . $path;
 
-        $folder = resource_path('views/vendor/zeus/themes/'.config('zeus.theme').'/'.$path);
+        $folder = resource_path('views/vendor/zeus/themes/' . config('zeus.theme') . '/' . $path);
 
-        if (!is_dir($folder)) {
-            $viewPath = 'zeus::themes.zeus.'.$path;
+        if (! is_dir($folder)) {
+            $viewPath = 'zeus::themes.zeus.' . $path;
         }
 
-        View::share($path.'Theme', $viewPath);
-        App::singleton($path.'Theme', function () use ($viewPath) {
+        View::share($path . 'Theme', $viewPath);
+        App::singleton($path . 'Theme', function () use ($viewPath) {
             return $viewPath;
         });
     }
