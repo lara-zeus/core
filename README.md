@@ -40,5 +40,10 @@ php artisan vendor:publish --tag=zeus-views
 php artisan vendor:publish --tag=zeus-assets
 ```
 
+## Quick start
+
+[![starter-kit](https://larazeus.com/images/starter-kit-mini.png?v=2)](https://github.com/lara-zeus/zeus)
+[![artemis](https://larazeus.com/images/artemis-mini.png?v=2)](https://github.com/lara-zeus/artemis)
+
 ## More Info
 check our packages at [Larazeus](https://larazeus.com/) website
