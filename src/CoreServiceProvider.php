@@ -60,10 +60,15 @@ class CoreServiceProvider extends PackageServiceProvider
     {
         $viewPath = 'zeus::themes.' . config('zeus.theme') . '.' . $path;
 
+        // check the app folder
         $folder = resource_path('views/vendor/zeus/themes/' . config('zeus.theme') . '/' . $path);
 
         if (! is_dir($folder)) {
-            $viewPath = 'zeus::themes.zeus.' . $path;
+            // check artemis folder
+            $folder = base_path('vendor/lara-zeus/artemis/resources/views/themes/' . config('zeus.theme') . '/' . $path);
+            if (! is_dir($folder)) {
+                $viewPath = 'zeus::themes.zeus.' . $path;
+            }
         }
 
         View::share($path . 'Theme', $viewPath);
