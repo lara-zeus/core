@@ -28,13 +28,14 @@ class CoreServiceProvider extends PackageServiceProvider
                 'rain',
                 'rhea',
                 'artemis',
-            ]);
-            AboutCommand::add('Zeus', fn () => [
-                'Core Version' => InstalledVersions::getPrettyVersion('lara-zeus/core'),
-                'Packages' => $packages
-                    ->filter(fn (string $package): bool => InstalledVersions::isInstalled("lara-zeus/{$package}"))
-                    ->join(', '),
-            ]);
+                'hermes',
+                'tyche',
+            ])
+                ->filter(fn (string $package): bool => InstalledVersions::isInstalled("lara-zeus/{$package}"))
+                ->mapWithKeys(fn ($package) => [$package => InstalledVersions::getPrettyVersion("lara-zeus/{$package}")])
+                ->toArray();
+
+            AboutCommand::add('Zeus ', $packages);
         }
         // let me have my fun 🤷🏽‍
         Blade::directive('zeus', function () {
