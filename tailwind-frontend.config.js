@@ -1,6 +1,8 @@
 import colors from 'tailwindcss/colors'
+import preset from './vendor/filament/filament/tailwind.config.preset'
 
 module.exports = {
+    presets: [preset],
     darkMode: 'class',
     content: [
         // Core

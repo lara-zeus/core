@@ -32,26 +32,24 @@
 }
 
 .checkbox-tile {
-    @apply border border-primary-600 dark:border-primary-800 shadow-lg bg-white dark:bg-black;
+    @apply rounded-lg border border-primary-600 dark:border-primary-800 shadow-lg bg-white dark:bg-black;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 7rem;
-    border-radius: 0.5rem;
     transition: 0.15s ease;
     cursor: pointer;
     position: relative;
 }
 
 .checkbox-tile:before {
-    @apply border border-primary-500 dark:border-primary-800;
+    @apply border border-primary-500 dark:border-primary-800 bg-white;
     content: "";
     position: absolute;
     display: block;
     width: 1.25rem;
     height: 1.25rem;
-    background-color: #fff;
     border-radius: 50%;
     top: 0.25rem;
     left: 0.25rem;

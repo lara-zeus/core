@@ -1,5 +1,5 @@
-@tailwind components;
-@tailwind utilities;
+@import '../../vendor/filament/filament/resources/css/theme.css';
+@import '_checkbox-cards.css';
 
 /* debug tool 😜 */
 .bord {
