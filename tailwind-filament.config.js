@@ -16,6 +16,8 @@ module.exports = {
         '../rhea/resources/views/**/*.blade.php',
         // Bolt
         '../bolt/resources/views/filament/**/*.blade.php',
+        // Bolt0pro
+        '../bolt-pro/resources/views/filament/**/*.blade.php',
         // Thunder
         '../thunder/resources/views/**/*.blade.php',
         '../thunder/src/Models/TicketsStatus.php',
@@ -35,6 +37,9 @@ module.exports = {
         },
     },
     plugins: [
+        require('tailwindcss-debug-screens'),
+        require('@tailwindcss/typography'),
+        require('@tailwindcss/forms'),
         require('tailwindcss-debug-screens'),
     ],
 };
