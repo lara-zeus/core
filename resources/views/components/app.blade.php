@@ -50,31 +50,27 @@
     </div>
 </header>
 
-@if(isset($header) || isset($breadcrumbs))
-    <div class="bg-gray-100 dark:bg-gray-800">
+<header class="bg-gray-100 dark:bg-gray-800">
         <div class="container mx-auto py-2 px-3">
-
-            @if(isset($header))
-                <div class="italic font-semibold text-xl text-gray-600 dark:text-gray-100">
-                    {{ $header }}
+            <div class="flex justify-between items-center">
+                <div class="w-full">
+                    @if(isset($breadcrumbs))
+                        <nav class="text-gray-400 font-bold my-1" aria-label="Breadcrumb">
+                            <ol class="list-none p-0 inline-flex">
+                                {{ $breadcrumbs }}
+                            </ol>
+                        </nav>
+                    @endif
+                    @if(isset($header))
+                        <div class="italic font-semibold text-xl text-gray-600 dark:text-gray-100">
+                            {{ $header }}
+                        </div>
+                    @endif
                 </div>
-            @endif
-
-            @if(isset($breadcrumbs))
-                <nav class="text-gray-400 font-bold my-2" aria-label="Breadcrumb">
-                    <ol class="list-none p-0 inline-flex">
-                        <li class="flex items-center">
-                            <a href="{{ url('/') }}">{{ __('Home') }}</a>
-                            @svg('heroicon-m-arrow-small-right','fill-current w-4 h-4 mx-3 rtl:rotate-180')
-                        </li>
-                        {{ $breadcrumbs }}
-                    </ol>
-                </nav>
-            @endif
-
+                <span class="bolt-loading animate-pulse"></span>
+            </div>
         </div>
-    </div>
-@endif
+    </header>
 
 <div class="container mx-auto my-6">
     {{ $slot }}
