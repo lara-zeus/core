@@ -4,6 +4,7 @@ namespace LaraZeus\Core;
 
 use Composer\InstalledVersions;
 use Filament\Support\Assets\Css;
+use Filament\Support\Assets\Js;
 use Filament\Support\Facades\FilamentAsset;
 use Illuminate\Foundation\Console\AboutCommand;
 use Illuminate\Support\Facades\App;
@@ -44,6 +45,7 @@ class CoreServiceProvider extends PackageServiceProvider
 
         FilamentAsset::register([
             Css::make('filament-lara-zeus', __DIR__ . '/../resources/dist/lara-zeus.css'),
+            Js::make('filament-lara-zeus', __DIR__ . '/../resources/dist/plugin.js'),
         ], 'lara-zeus');
     }
 

@@ -7,6 +7,7 @@ module.exports = {
         // Wind
         '../wind/src/Filament/Resources/LetterResource.php',
         // Sky
+        '../sky/resources/views/components/nav-item.blade.php',
         '../sky/resources/views/filament/**/*.blade.php',
         '../sky/src/Models/PostStatus.php',
         // Rain
