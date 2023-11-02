@@ -13,6 +13,8 @@ mix
         tailwindcss("./tailwind-frontend.config.js"),
     ])
 
+    .js('resources/js/plugin.js', 'resources/dist/plugin.js')
+
    .setPublicPath('resources')
 ;
 
