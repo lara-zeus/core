@@ -14,9 +14,8 @@ mix
     ])
 
     .js('resources/js/plugin.js', 'resources/dist/plugin.js')
-
-   .setPublicPath('resources')
-;
+    .js("resources/js/helen.js", "resources/dist/helen.js")
+   .setPublicPath('resources');
 
 if (mix.inProduction()) {
     mix.version();
