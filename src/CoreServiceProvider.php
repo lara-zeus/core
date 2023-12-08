@@ -25,11 +25,13 @@ class CoreServiceProvider extends PackageServiceProvider
                 'wind',
                 'sky',
                 'bolt',
+                'bolt-pro',
                 'thunder',
                 'rain',
                 'rhea',
                 'artemis',
                 'hermes',
+                'helen',
                 'tyche',
             ])
                 ->filter(fn (string $package): bool => InstalledVersions::isInstalled("lara-zeus/{$package}"))

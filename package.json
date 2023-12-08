@@ -11,6 +11,8 @@
         "purge": "filament-purge -i ./resources/dist/filament-tail.css -o ./resources/dist/lara-zeus.css -v 3.x"
     },
     "devDependencies": {
+        "dom-to-image": "^2.6.0",
+        "file-saver": "^2.0.5",
         "sortablejs": "^1.15.0",
         "@tailwindcss/forms": "^0.5.6",
         "@tailwindcss/typography": "^0.5.10",
