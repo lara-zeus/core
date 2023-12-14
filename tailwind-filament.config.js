@@ -10,9 +10,9 @@ module.exports = {
         '../sky/resources/views/components/nav-item.blade.php',
         '../sky/resources/views/filament/**/*.blade.php',
         '../sky/src/Models/PostStatus.php',
-        // Rain
-        '../rain/resources/views/filament/**/*.blade.php',
-        '../rain/src/Models/Columns.php',
+        // DynamicDashboard
+        '../dynamic-dashboard/resources/views/filament/**/*.blade.php',
+        '../dynamic-dashboard/src/Models/Columns.php',
         // Rhea
         '../rhea/resources/views/**/*.blade.php',
         // Bolt

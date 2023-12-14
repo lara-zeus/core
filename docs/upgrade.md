@@ -62,7 +62,7 @@ All Zeus plugins depend on other plugins, and you must register them all.
         // or if you have more
         ->defaultLocales(['en', 'es']),
         
-    // required for 'Sky' and 'Rain' only
+    // required for 'Sky' and 'dynamic dashboard' only
     FilamentNavigation::make(),
 ])
 ```
