@@ -34,7 +34,7 @@ class CoreServiceProvider extends PackageServiceProvider
                 'artemis',
                 'matrix-choice',
                 'core',
-                'tyche',
+                'popover',
             ])
                 ->filter(fn (string $package): bool => InstalledVersions::isInstalled("lara-zeus/{$package}"))
                 ->mapWithKeys(fn ($package) => [$package => InstalledVersions::getPrettyVersion("lara-zeus/{$package}")])
