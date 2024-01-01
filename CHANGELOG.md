@@ -2,6 +2,15 @@
 
 All notable changes to `zeus` will be documented in this file
 
+## v3.0.15 - 2024-01-01
+
+### What's Changed
+
+* Bump aglipanci/laravel-pint-action from 2.3.0 to 2.3.1 by @dependabot in https://github.com/lara-zeus/core/pull/80
+* add popover package to about command by @atmonshi in https://github.com/lara-zeus/core/pull/81
+
+**Full Changelog**: https://github.com/lara-zeus/core/compare/v3.0.14...v3.0.15
+
 ## v3.0.14 - 2023-12-15
 
 ### What's Changed
@@ -266,11 +275,13 @@ php artisan vendor:publish --tag=zeus-assets
 
 
 
+
 ```
 the same for the views, backup your changes and republish them:
 
 ```bash
 php artisan vendor:publish --tag=zeus-views
+
 
 
 
