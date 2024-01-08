@@ -27,24 +27,25 @@
         "ext-json": "*",
         "ext-pdo_sqlite": "*",
         "ext-sqlite3": "*",
-        "filament/spatie-laravel-translatable-plugin": "^3.0",
+        "filament/spatie-laravel-translatable-plugin": "^3.1",
         "archtechx/laravel-seo": "^0.7",
         "calebporzio/sushi": "^2.4",
         "codeat3/blade-iconpark": "^1.5",
-        "filament/filament": "^3.0"
+        "filament/filament": "^3.1"
     },
     "require-dev": {
-        "pestphp/pest": "^2.0",
         "phpunit/phpunit": "^10.1",
-        "laravel/pint": "^1.0",
         "nunomaduro/collision": "^7.0",
-        "nunomaduro/larastan": "^2.0.1",
-        "orchestra/testbench": "^7.0 || ^8.0",
-        "pestphp/pest-plugin-laravel": "2.x-dev",
         "pestphp/pest-plugin-livewire": "2.x-dev",
-        "phpstan/extension-installer": "^1.1",
         "phpstan/phpstan-deprecation-rules": "^1.0",
-        "phpstan/phpstan-phpunit": "^1.0"
+        "phpstan/phpstan-phpunit": "^1.0",
+        "laravel/pint": "^1.0",
+        "larastan/larastan": "^2.2",
+        "orchestra/testbench": "^8.0",
+        "pestphp/pest": "^2.0",
+        "pestphp/pest-plugin-laravel": "^2.0",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan": "^1.10"
     },
     "autoload": {
         "psr-4": {
