@@ -2,6 +2,15 @@
 
 All notable changes to `zeus` will be documented in this file
 
+## v3.1.0 - 2024-01-08
+
+### What's Changed
+
+* add accordion and update filament to v3.1 by @atmonshi in https://github.com/lara-zeus/core/pull/82
+* update assets by @atmonshi in https://github.com/lara-zeus/core/pull/83
+
+**Full Changelog**: https://github.com/lara-zeus/core/compare/v3.0.15...v3.1.0
+
 ## v3.0.15 - 2024-01-01
 
 ### What's Changed
@@ -276,11 +285,13 @@ php artisan vendor:publish --tag=zeus-assets
 
 
 
+
 ```
 the same for the views, backup your changes and republish them:
 
 ```bash
 php artisan vendor:publish --tag=zeus-views
+
 
 
 
