@@ -2,6 +2,14 @@
 
 All notable changes to `zeus` will be documented in this file
 
+## v3.1.1 - 2024-01-09
+
+### What's Changed
+
+* add hera by @atmonshi in https://github.com/lara-zeus/core/pull/84
+
+**Full Changelog**: https://github.com/lara-zeus/core/compare/v3.1.0...v3.1.1
+
 ## v3.1.0 - 2024-01-08
 
 ### What's Changed
@@ -286,11 +294,13 @@ php artisan vendor:publish --tag=zeus-assets
 
 
 
+
 ```
 the same for the views, backup your changes and republish them:
 
 ```bash
 php artisan vendor:publish --tag=zeus-views
+
 
 
 
