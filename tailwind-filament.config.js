@@ -22,6 +22,8 @@ module.exports = {
         // Thunder
         '../thunder/resources/views/**/*.blade.php',
         '../thunder/src/Models/TicketsStatus.php',
+        // hera
+        '../hera/resources/views/**/*.blade.php',
     ],
     theme: {
         extend: {
