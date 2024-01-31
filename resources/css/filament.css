@@ -5,3 +5,6 @@
 .bord {
     border: solid 1px chocolate;
 }
+.compact-timeline .fi-timeline-item-heading {
+    @apply flex-col items-start md:space-y-0 md:space-x-0 gap-2 md:flex-col !important;
+}
