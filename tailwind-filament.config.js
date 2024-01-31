@@ -23,6 +23,8 @@ module.exports = {
         '../thunder/resources/views/**/*.blade.php',
         '../thunder/src/Models/TicketsStatus.php',
         '../thunder/vendor/jaocero/activity-timeline/resources/views/**/*.blade.php',
+        // hera
+        '../hera/resources/views/**/*.blade.php',
     ],
     theme: {
         extend: {
