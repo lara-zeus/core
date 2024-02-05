@@ -8,3 +8,11 @@
 .compact-timeline .fi-timeline-item-heading {
     @apply flex-col items-start md:space-y-0 md:space-x-0 gap-2 md:flex-col !important;
 }
+
+.field-type .choices__list--single {
+    @apply !w-full;
+}
+
+.field-type .choices__list--single .tip, .field-type .choices__list--single .field-desc {
+    @apply !hidden;
+}
