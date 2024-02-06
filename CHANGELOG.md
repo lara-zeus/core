@@ -2,6 +2,14 @@
 
 All notable changes to `zeus` will be documented in this file
 
+## v3.1.4 - 2024-02-06
+
+### What's Changed
+
+* fix site name in main layout by @atmonshi in https://github.com/lara-zeus/core/pull/87
+
+**Full Changelog**: https://github.com/lara-zeus/core/compare/v3.1.3...v3.1.4
+
 ## v3.1.3 - 2024-02-05
 
 ### What's Changed
@@ -313,11 +321,13 @@ php artisan vendor:publish --tag=zeus-assets
 
 
 
+
 ```
 the same for the views, backup your changes and republish them:
 
 ```bash
 php artisan vendor:publish --tag=zeus-views
+
 
 
 
