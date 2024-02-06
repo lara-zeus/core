@@ -17,7 +17,7 @@ module.exports = {
         '../rhea/resources/views/**/*.blade.php',
         // Bolt
         '../bolt/resources/views/filament/**/*.blade.php',
-        // Bolt0pro
+        // Bolt pro
         '../bolt-pro/resources/views/filament/**/*.blade.php',
         // Thunder
         '../thunder/resources/views/**/*.blade.php',
