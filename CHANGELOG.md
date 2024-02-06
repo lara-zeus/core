@@ -2,6 +2,14 @@
 
 All notable changes to `zeus` will be documented in this file
 
+## v3.1.5 - 2024-02-06
+
+### What's Changed
+
+* fix timeline styles by @atmonshi in https://github.com/lara-zeus/core/pull/88
+
+**Full Changelog**: https://github.com/lara-zeus/core/compare/v3.1.4...v3.1.5
+
 ## v3.1.4 - 2024-02-06
 
 ### What's Changed
@@ -322,11 +330,13 @@ php artisan vendor:publish --tag=zeus-assets
 
 
 
+
 ```
 the same for the views, backup your changes and republish them:
 
 ```bash
 php artisan vendor:publish --tag=zeus-views
+
 
 
 
