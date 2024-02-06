@@ -33,7 +33,7 @@
             <div class="flex">
                 <div class="flex-shrink-0 flex items-center">
                     <a class="italic flex gap-2 group" href="{{ url('/') }}">
-                        <img class="w-7" src="https://larazeus.com/images/zeus-logo.png" alt="{{ config('zeus.wind.name', config('app.name', 'Laravel')) }}">
+                        <img class="w-7" src="https://larazeus.com/images/zeus-logo.png" alt="{{ config('zeus.site_title', config('app.name', 'Laravel')) }}">
                         @zeus
                     </a>
                 </div>

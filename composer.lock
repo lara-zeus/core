@@ -2644,12 +2644,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/csv.git",
-                "reference": "d6974307122de8dab1d310db949401fbe497c43f"
+                "reference": "91dc8ff21a8c3254bf4fd47d4ac0ab23044bd16a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/csv/zipball/d6974307122de8dab1d310db949401fbe497c43f",
-                "reference": "d6974307122de8dab1d310db949401fbe497c43f",
+                "url": "https://api.github.com/repos/thephpleague/csv/zipball/91dc8ff21a8c3254bf4fd47d4ac0ab23044bd16a",
+                "reference": "91dc8ff21a8c3254bf4fd47d4ac0ab23044bd16a",
                 "shasum": ""
             },
             "require": {
@@ -2726,7 +2726,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-31T20:50:56+00:00"
+            "time": "2024-02-05T21:53:43+00:00"
         },
         {
             "name": "league/flysystem",
@@ -3362,12 +3362,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "f15f98e6c50cf04cb46220f313a001311a5ba16a"
+                "reference": "57fbbf88ce332f6da4e5aa1ea7524ef1caebb9e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/f15f98e6c50cf04cb46220f313a001311a5ba16a",
-                "reference": "f15f98e6c50cf04cb46220f313a001311a5ba16a",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/57fbbf88ce332f6da4e5aa1ea7524ef1caebb9e4",
+                "reference": "57fbbf88ce332f6da4e5aa1ea7524ef1caebb9e4",
                 "shasum": ""
             },
             "require": {
@@ -3461,7 +3461,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-02-05T13:28:56+00:00"
+            "time": "2024-02-05T13:50:32+00:00"
         },
         {
             "name": "nette/schema",
@@ -4385,12 +4385,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramsey/uuid.git",
-                "reference": "c41944d91f3dccb308b2cceec9150cb96fb0605c"
+                "reference": "3e9a9842eea358393af3e7ae96228ce6ceac5509"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/uuid/zipball/c41944d91f3dccb308b2cceec9150cb96fb0605c",
-                "reference": "c41944d91f3dccb308b2cceec9150cb96fb0605c",
+                "url": "https://api.github.com/repos/ramsey/uuid/zipball/3e9a9842eea358393af3e7ae96228ce6ceac5509",
+                "reference": "3e9a9842eea358393af3e7ae96228ce6ceac5509",
                 "shasum": ""
             },
             "require": {
@@ -4470,7 +4470,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-01-29T21:59:33+00:00"
+            "time": "2024-02-05T21:53:35+00:00"
         },
         {
             "name": "ryangjchandler/blade-capture-directive",
@@ -7402,12 +7402,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/paratestphp/paratest.git",
-                "reference": "4ffc52ebbce2f259d6a15c1ddaf4ad837eef6703"
+                "reference": "b2830e330011d59a799c0002e118f5b4bbdb9604"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paratestphp/paratest/zipball/4ffc52ebbce2f259d6a15c1ddaf4ad837eef6703",
-                "reference": "4ffc52ebbce2f259d6a15c1ddaf4ad837eef6703",
+                "url": "https://api.github.com/repos/paratestphp/paratest/zipball/b2830e330011d59a799c0002e118f5b4bbdb9604",
+                "reference": "b2830e330011d59a799c0002e118f5b4bbdb9604",
                 "shasum": ""
             },
             "require": {
@@ -7421,7 +7421,7 @@
                 "phpunit/php-code-coverage": "^10.1.11 || ^11.0.0",
                 "phpunit/php-file-iterator": "^4.1.0 || ^5.0.0",
                 "phpunit/php-timer": "^6.0.0 || ^7.0.0",
-                "phpunit/phpunit": "^10.5.9 || ^11.0.0",
+                "phpunit/phpunit": "^10.5.9 || ^11.0.2",
                 "sebastian/environment": "^6.0.1 || ^7.0.0",
                 "symfony/console": "^6.4.3 || ^7.0.3",
                 "symfony/process": "^6.4.3 || ^7.0.3"
@@ -7477,7 +7477,7 @@
             ],
             "support": {
                 "issues": "https://github.com/paratestphp/paratest/issues",
-                "source": "https://github.com/paratestphp/paratest/tree/v7.4.0"
+                "source": "https://github.com/paratestphp/paratest/tree/v7.4.1"
             },
             "funding": [
                 {
@@ -7489,7 +7489,7 @@
                     "type": "paypal"
                 }
             ],
-            "time": "2024-02-02T09:37:18+00:00"
+            "time": "2024-02-06T13:50:28+00:00"
         },
         {
             "name": "composer/semver",
@@ -7943,12 +7943,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Jean85/pretty-package-versions.git",
-                "reference": "a0427613ed159314b1aac96952edd515fa2a284f"
+                "reference": "25a870421edfb4f9cd06fbd15ad8019b7bd8e612"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Jean85/pretty-package-versions/zipball/a0427613ed159314b1aac96952edd515fa2a284f",
-                "reference": "a0427613ed159314b1aac96952edd515fa2a284f",
+                "url": "https://api.github.com/repos/Jean85/pretty-package-versions/zipball/25a870421edfb4f9cd06fbd15ad8019b7bd8e612",
+                "reference": "25a870421edfb4f9cd06fbd15ad8019b7bd8e612",
                 "shasum": ""
             },
             "require": {
@@ -7995,7 +7995,7 @@
                 "issues": "https://github.com/Jean85/pretty-package-versions/issues",
                 "source": "https://github.com/Jean85/pretty-package-versions/tree/2.x"
             },
-            "time": "2023-08-09T11:39:12+00:00"
+            "time": "2024-02-06T11:57:35+00:00"
         },
         {
             "name": "larastan/larastan",
@@ -8686,21 +8686,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/orchestral/testbench.git",
-                "reference": "ee9455582d69c030ef869268be9a563871a4d03f"
+                "reference": "2943ae446d87780451e026fda6e7c33fae08a5fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orchestral/testbench/zipball/ee9455582d69c030ef869268be9a563871a4d03f",
-                "reference": "ee9455582d69c030ef869268be9a563871a4d03f",
+                "url": "https://api.github.com/repos/orchestral/testbench/zipball/2943ae446d87780451e026fda6e7c33fae08a5fa",
+                "reference": "2943ae446d87780451e026fda6e7c33fae08a5fa",
                 "shasum": ""
             },
             "require": {
                 "composer-runtime-api": "^2.2",
                 "fakerphp/faker": "^1.21",
-                "laravel/framework": "10.x-dev",
+                "laravel/framework": "^10.40",
                 "mockery/mockery": "^1.5.1",
-                "orchestra/testbench-core": "8.x-dev",
-                "orchestra/workbench": "8.x-dev",
+                "orchestra/testbench-core": "^8.21.1",
+                "orchestra/workbench": "^1.2 || ^8.2",
                 "php": "^8.1",
                 "phpunit/phpunit": "^9.6 || ^10.1",
                 "symfony/process": "^6.2",
@@ -8733,7 +8733,7 @@
                 "issues": "https://github.com/orchestral/testbench/issues",
                 "source": "https://github.com/orchestral/testbench/tree/8.x"
             },
-            "time": "2024-01-22T03:24:56+00:00"
+            "time": "2024-02-06T03:01:55+00:00"
         },
         {
             "name": "orchestra/testbench-core",
