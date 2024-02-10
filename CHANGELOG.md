@@ -2,6 +2,14 @@
 
 All notable changes to `zeus` will be documented in this file
 
+## v3.1.7 - 2024-02-10
+
+### What's Changed
+
+* Update CanGloballySearch.php by @atmonshi in https://github.com/lara-zeus/core/pull/90
+
+**Full Changelog**: https://github.com/lara-zeus/core/compare/v3.1.6...v3.1.7
+
 ## v3.1.6 - 2024-02-10
 
 ### What's Changed
@@ -340,11 +348,13 @@ php artisan vendor:publish --tag=zeus-assets
 
 
 
+
 ```
 the same for the views, backup your changes and republish them:
 
 ```bash
 php artisan vendor:publish --tag=zeus-views
+
 
 
 
