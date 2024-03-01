@@ -82,10 +82,10 @@
     </a>
 </footer>
 
-@stack('scripts')
 @livewireScripts
 @filamentScripts
 @livewire('notifications')
+@stack('scripts')
 
 <script>
     const theme = localStorage.getItem('theme')

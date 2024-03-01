@@ -23,4 +23,5 @@ if (mix.inProduction()) {
     mix.copy('resources/dist', '../demo/public/css/lara-zeus')
     mix.copy('resources/dist', '../demo/public/vendor/zeus')
     mix.copy('resources/dist', '../zeus/public/vendor/zeus')
+    mix.copy('resources/dist', '../ath/public/vendor/zeus')
 }
