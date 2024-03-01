@@ -18,10 +18,14 @@ module.exports = {
         // Thunder
         '../thunder/resources/views/themes/**/*.blade.php',
         '../thunder/src/Models/TicketsStatus.php',
+        // athena
+        '../athena/resources/views/themes/**/*.blade.php',
+        '../athena/resources/views/components/**/*.blade.php',
+        '../athena/src/Models/RequestStatus.php',
         // helen
-        './vendor/lara-zeus/helen/resources/views/**/*.blade.php',
-        './vendor/lara-zeus/helen/src/Filament/Resources/LinksResource.php',
-        './vendor/lara-zeus/helen/src/Facades/Helen.php',
+        '../helen/resources/views/**/*.blade.php',
+        '../helen/src/Filament/Resources/LinksResource.php',
+        '../helen/src/Facades/Helen.php',
         // hermes
         '../hermes/resources/views/themes/**/*.blade.php',
         // Rain

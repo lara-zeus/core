@@ -23,6 +23,9 @@ module.exports = {
         '../thunder/resources/views/**/*.blade.php',
         '../thunder/src/Models/TicketsStatus.php',
         '../thunder/vendor/jaocero/activity-timeline/resources/views/**/*.blade.php',
+        // athena
+        '../athena/resources/views/filament/**/*.blade.php',
+        '../athena/src/Models/RequestStatus.php',
         // hera
         '../hera/resources/views/**/*.blade.php',
     ],
