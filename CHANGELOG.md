@@ -2,6 +2,15 @@
 
 All notable changes to `zeus` will be documented in this file
 
+## v3.1.9 - 2024-03-12
+
+### What's Changed
+
+* Bump ramsey/composer-install from 2 to 3 by @dependabot in https://github.com/lara-zeus/core/pull/92
+* update laravel-seo to support laravel 11 by @atmonshi in https://github.com/lara-zeus/core/pull/93
+
+**Full Changelog**: https://github.com/lara-zeus/core/compare/v3.1.8...v3.1.9
+
 ## v3.1.8 - 2024-03-01
 
 ### What's Changed
@@ -358,11 +367,13 @@ php artisan vendor:publish --tag=zeus-assets
 
 
 
+
 ```
 the same for the views, backup your changes and republish them:
 
 ```bash
 php artisan vendor:publish --tag=zeus-views
+
 
 
 
