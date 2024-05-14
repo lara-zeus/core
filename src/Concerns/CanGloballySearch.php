@@ -4,25 +4,23 @@ namespace LaraZeus\Core\Concerns;
 
 trait CanGloballySearch
 {
-    public array $globallySearchableAttributes = [];
-
     public function globallySearchableAttributes(array $label): static
     {
-        $this->globallySearchableAttributes = $label;
+        $this->defaultGloballySearchableAttributes = $label;
 
         return $this;
     }
 
     public function getGloballySearchableAttributes(): array
     {
-        return $this->globallySearchableAttributes;
+        return $this->defaultGloballySearchableAttributes;
     }
 
     public function getGlobalAttributes(string $class): array
     {
         return array_merge(
             (new static())::get()->defaultGloballySearchableAttributes,
-            $this->globallySearchableAttributes
+            $this->defaultGloballySearchableAttributes
         )[$class];
     }
 }
