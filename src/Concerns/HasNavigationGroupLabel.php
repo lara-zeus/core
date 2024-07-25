@@ -4,7 +4,7 @@ namespace LaraZeus\Core\Concerns;
 
 use Closure;
 
-trait HasNavGroupLabel
+trait HasNavigationGroupLabel
 {
     public function navigationGroupLabel(Closure | string $label): static
     {

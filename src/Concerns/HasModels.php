@@ -6,6 +6,8 @@ use Closure;
 
 trait HasModels
 {
+    protected array $models = [];
+
     public function models(array $models): static
     {
         $this->models = $models;
@@ -20,6 +22,9 @@ trait HasModels
 
     public static function getModel(string $model): string
     {
-        return (new static())::get()->getModels()[$model];
+        return array_merge(
+            self::getDefaultModelsToMerge(),
+            (new static())::get()->getModels()
+        )[$model];
     }
 }
