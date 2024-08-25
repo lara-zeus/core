@@ -1,5 +1,5 @@
 <p align="center">
-<a href="https://larazeus.com"><img src="https://larazeus.com/images/lara-zeus-core.png?v=2" /></a>
+<a href="https://larazeus.com"><img src="https://larazeus.com/images/lara-zeus-core.webp?v=2" /></a>
 </p>
 
 <p align="center">
@@ -21,7 +21,7 @@ thia is the main UI core, and blade components for all lara-zeus packages
 ## Support Filament
 
 <a href="https://github.com/sponsors/danharrin">
-<img alt="filament-logo" src="https://larazeus.com/images/filament-sponsor-banner.png">
+<img alt="filament-logo" src="https://larazeus.com/images/filament-sponsor-banner.webp">
 </a>
 
 ## Why this a separate package
@@ -42,8 +42,8 @@ php artisan vendor:publish --tag=zeus-assets
 
 ## Quick start
 
-[![starter-kit](https://larazeus.com/images/starter-kit-mini.png?v=2)](https://github.com/lara-zeus/zeus)
-[![artemis](https://larazeus.com/images/artemis-mini.png?v=2)](https://github.com/lara-zeus/artemis)
+[![starter-kit](https://larazeus.com/images/starter-kit-mini.webp?v=2)](https://github.com/lara-zeus/zeus)
+[![artemis](https://larazeus.com/images/artemis-mini.webp?v=2)](https://github.com/lara-zeus/artemis)
 
 ## More Info
 check our packages at [Larazeus](https://larazeus.com/) website

@@ -2,6 +2,21 @@
 
 All notable changes to `zeus` will be documented in this file
 
+## v3.1.10 - 2024-08-02
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 1.6.0 to 2.0.0 by @dependabot in https://github.com/lara-zeus/core/pull/94
+* Bump webpack-dev-middleware from 5.3.3 to 5.3.4 by @dependabot in https://github.com/lara-zeus/core/pull/95
+* Bump express from 4.18.3 to 4.19.2 by @dependabot in https://github.com/lara-zeus/core/pull/96
+* Bump follow-redirects from 1.15.5 to 1.15.6 by @dependabot in https://github.com/lara-zeus/core/pull/97
+* Bump aglipanci/laravel-pint-action from 2.3.1 to 2.4 by @dependabot in https://github.com/lara-zeus/core/pull/98
+* Bump dependabot/fetch-metadata from 2.0.0 to 2.1.0 by @dependabot in https://github.com/lara-zeus/core/pull/99
+* Bump dependabot/fetch-metadata from 2.1.0 to 2.2.0 by @dependabot in https://github.com/lara-zeus/core/pull/100
+* fix in global search by @atmonshi in https://github.com/lara-zeus/core/pull/101
+
+**Full Changelog**: https://github.com/lara-zeus/core/compare/v3.1.9...v3.1.10
+
 ## v3.1.9 - 2024-03-12
 
 ### What's Changed
@@ -368,11 +383,13 @@ php artisan vendor:publish --tag=zeus-assets
 
 
 
+
 ```
 the same for the views, backup your changes and republish them:
 
 ```bash
 php artisan vendor:publish --tag=zeus-views
+
 
 
 
