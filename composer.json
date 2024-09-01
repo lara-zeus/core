@@ -27,11 +27,11 @@
         "ext-json": "*",
         "ext-pdo_sqlite": "*",
         "ext-sqlite3": "*",
-        "filament/spatie-laravel-translatable-plugin": "^3.1",
+        "filament/spatie-laravel-translatable-plugin": "4.x-dev",
         "archtechx/laravel-seo": "^0.10",
         "calebporzio/sushi": "^2.4",
         "codeat3/blade-iconpark": "^1.5",
-        "filament/filament": "^3.1"
+        "filament/filament": "4.x-dev"
     },
     "require-dev": {
         "phpunit/phpunit": "^10.1",
@@ -83,5 +83,11 @@
                 "Core": "LaraZeus\\Core\\CoreFacade"
             }
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../filament/packages/*"
+        }
+    ]
 }
