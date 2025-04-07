@@ -2,8 +2,6 @@
 
 namespace LaraZeus\Core\Concerns;
 
-use Closure;
-
 trait CanHideResources
 {
     protected array $hideResources = [];

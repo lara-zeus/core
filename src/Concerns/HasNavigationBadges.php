@@ -42,6 +42,6 @@ trait HasNavigationBadges
 
     public static function getNavigationBadgesVisibility(?string $resource = null): bool
     {
-        return (new static())::get()->getShowNavigationBadges($resource);
+        return (new static)::get()->getShowNavigationBadges($resource);
     }
 }

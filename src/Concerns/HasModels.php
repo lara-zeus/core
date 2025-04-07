@@ -2,8 +2,6 @@
 
 namespace LaraZeus\Core\Concerns;
 
-use Closure;
-
 trait HasModels
 {
     protected array $models = [];
@@ -24,7 +22,7 @@ trait HasModels
     {
         return array_merge(
             self::getDefaultModelsToMerge(),
-            (new static())::get()->getModels()
+            (new static)::get()->getModels()
         )[$model];
     }
 }
