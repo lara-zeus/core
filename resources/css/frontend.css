@@ -1,5 +1,20 @@
+@import 'tailwindcss';
 @import '../../vendor/filament/filament/resources/css/theme.css';
-@import '_checkbox-cards.css';
+@import './_checkbox-cards.css';
+@import './theme.css';
+
+@source '../../vendor/filament/**/*.blade.php';
+@source '../../../**/*.blade.php';
+
+@layer base {
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
+}
 
 /* Sky search result highlight */
 span.highlight {

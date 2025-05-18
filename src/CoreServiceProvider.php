@@ -50,7 +50,7 @@ class CoreServiceProvider extends PackageServiceProvider
         });
 
         FilamentAsset::register([
-            Css::make('filament-lara-zeus', __DIR__ . '/../resources/dist/lara-zeus.css'),
+            //Css::make('filament-lara-zeus', __DIR__ . '/../resources/dist/lara-zeus.css'),
             Js::make('filament-lara-zeus', __DIR__ . '/../resources/dist/plugin.js'),
         ], 'lara-zeus');
     }

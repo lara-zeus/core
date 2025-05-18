@@ -1,36 +1,17 @@
 {
+    "type": "module",
     "private": true,
     "scripts": {
-        "dev": "npm run development",
-        "development": "mix && npm run purge",
-        "watch": "mix watch && npm run purge",
-        "watch-poll": "mix watch -- --watch-options-poll=1000",
-        "hot": "mix watch --hot",
-        "prod": "npm run production",
-        "production": "mix --production && npm run purge",
-        "purge": "filament-purge -i ./resources/dist/filament-tail.css -o ./resources/dist/lara-zeus.css -v 3.x"
+        "dev-front": "npx @tailwindcss/cli -i ./resources/css/frontend.css -o ./resources/dist/frontend.css --minify",
+        "dev-filament": "npx @tailwindcss/cli -i ./resources/css/filament.css -o ./resources/dist/filament.css --minify",
+        "dev": "npm run dev-front && npm run dev-filament && node bin/build.js"
     },
     "devDependencies": {
-        "@alpinejs/collapse": "^3.12.0",
-        "@alpinejs/focus": "^3.12.0",
-        "@awcodes/filament-plugin-purge": "^1.1.1",
-        "@ryangjchandler/alpine-tooltip": "^1.2.0",
-        "@tailwindcss/forms": "^0.5.6",
-        "@tailwindcss/typography": "^0.5.10",
-        "alpinejs": "^3.13.0",
-        "autoprefixer": "^10.4.15",
-        "daisyui": "^3.1.7",
-        "dom-to-image": "^2.6.0",
-        "file-saver": "^2.0.5",
-        "laravel-mix": "^6.0.49",
-        "lodash": "^4.17.21",
-        "photoswipe": "^5.3.9",
-        "postcss": "^8.4.29",
-        "postcss-import": "^15.1.0",
+        "@tailwindcss/forms": "^0.5.10",
+        "@tailwindcss/postcss": "^4.1.7",
+        "@tailwindcss/typography": "^0.5.16",
+        "tailwindcss": "^4.1.7",
         "sortablejs": "^1.15.0",
-        "tailwindcss": "^3.3.3",
-        "tailwindcss-debug-screens": "^2.2.1",
-        "tippy.js": "^6.3.7"
-    },
-    "dependencies": {}
+        "esbuild": "^0.19.2"
+    }
 }

@@ -1,5 +1,10 @@
+@import 'tailwindcss';
 @import '../../vendor/filament/filament/resources/css/theme.css';
-@import '_checkbox-cards.css';
+@import './_checkbox-cards.css';
+@import './theme.css';
+
+@source '../../vendor/filament/**/*.blade.php';
+@source '../../../**/*.blade.php';
 
 /* debug tool 😜 */
 .bord {
@@ -7,13 +12,15 @@
 }
 
 .compact-timeline .fi-timeline-item-heading {
-    @apply flex-col items-start md:space-y-0 md:space-x-0 gap-2 md:flex-col !important;
+    @apply flex-col items-start md:space-y-0 md:space-x-0 gap-2 md:flex-col;
 }
+
 .compact-timeline .fi-timeline-section-content {
-    @apply p-0 !important;
+    @apply p-0;
 }
+
 .compact-timeline {
-    @apply ring-0 !important;
+    @apply ring-0;
 }
 
 .field-type .choices__list--single {
