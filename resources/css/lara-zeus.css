@@ -1,10 +1,8 @@
 @import 'tailwindcss';
-@import '../../vendor/filament/filament/resources/css/theme.css';
 @import './_checkbox-cards.css';
 @import './theme.css';
 
-@source '../../vendor/filament/**/*.blade.php';
-@source '../../../**/*.blade.php';
+@source '../../../**/*.php';
 
 /* debug tool 😜 */
 .bord {

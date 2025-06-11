@@ -9,4 +9,3 @@ parameters:
         - tests
     checkOctaneCompatibility: true
     checkModelProperties: true
-    checkMissingIterableValueType: false

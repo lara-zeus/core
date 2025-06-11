@@ -3,7 +3,7 @@
     "private": true,
     "scripts": {
         "dev-front": "npx @tailwindcss/cli -i ./resources/css/frontend.css -o ./resources/dist/frontend.css --minify",
-        "dev-filament": "npx @tailwindcss/cli -i ./resources/css/filament.css -o ./resources/dist/filament.css --minify",
+        "dev-filament": "npx @tailwindcss/cli -i ./resources/css/lara-zeus.css -o ./resources/dist/lara-zeus.css --minify",
         "dev": "npm run dev-front && npm run dev-filament && node bin/build.js"
     },
     "devDependencies": {

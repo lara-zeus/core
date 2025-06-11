@@ -44,13 +44,14 @@ class CoreServiceProvider extends PackageServiceProvider
 
             AboutCommand::add('Zeus ', $packages);
         }
+
         // let me have my fun 🤷🏽‍
         Blade::directive('zeus', function () {
             return '<span class="text-primary-700 group"><span class="font-semibold text-primary-600 group-hover:text-primary-500 transition ease-in-out duration-300">Lara&nbsp;<span class="line-through italic text-primary-500 group-hover:text-primary-600 transition ease-in-out duration-300">Z</span>eus</span></span>';
         });
 
         FilamentAsset::register([
-            // Css::make('filament-lara-zeus', __DIR__ . '/../resources/dist/lara-zeus.css'),
+            Css::make('filament-lara-zeus', __DIR__ . '/../resources/dist/lara-zeus.css'),
             Js::make('filament-lara-zeus', __DIR__ . '/../resources/dist/plugin.js'),
         ], 'lara-zeus');
     }
