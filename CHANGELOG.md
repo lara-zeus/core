@@ -2,6 +2,10 @@
 
 All notable changes to `zeus` will be documented in this file
 
+## 4.0.1 - 2025-06-11
+
+fix nav alpine component
+
 ## v3.2.2 - 2025-03-09
 
 ### What's Changed
@@ -440,11 +444,13 @@ php artisan vendor:publish --tag=zeus-assets
 
 
 
+
 ```
 the same for the views, backup your changes and republish them:
 
 ```bash
 php artisan vendor:publish --tag=zeus-views
+
 
 
 
