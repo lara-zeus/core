@@ -56,7 +56,7 @@ All Zeus plugins depend on other plugins, and you must register them all.
 ```php
 ->plugins([
     // ...
-    SpatieLaravelTranslatablePlugin::make()
+    SpatieTranslatablePlugin::make()
         //If you don't use multi-language
         ->defaultLocales([config('app.locale')])
         // or if you have more
