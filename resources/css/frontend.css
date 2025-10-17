@@ -6,16 +6,6 @@
 @source '../../vendor/filament/**/*.blade.php';
 @source '../../../**/*.blade.php';
 
-@layer base {
-    *,
-    ::after,
-    ::before,
-    ::backdrop,
-    ::file-selector-button {
-        border-color: var(--color-gray-200, currentColor);
-    }
-}
-
 /* Sky search result highlight */
 span.highlight {
     @apply bg-primary-200 text-primary-700 px-2
