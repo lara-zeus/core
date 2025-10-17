@@ -2,6 +2,14 @@
 
 All notable changes to `zeus` will be documented in this file
 
+## 4.0.2 - 2025-10-17
+
+### What's Changed
+
+* Updates by @atmonshi in https://github.com/lara-zeus/core/pull/115
+
+**Full Changelog**: https://github.com/lara-zeus/core/compare/4.0.1...4.0.2
+
 ## 4.0.1 - 2025-06-11
 
 fix nav alpine component
@@ -445,11 +453,13 @@ php artisan vendor:publish --tag=zeus-assets
 
 
 
+
 ```
 the same for the views, backup your changes and republish them:
 
 ```bash
 php artisan vendor:publish --tag=zeus-views
+
 
 
 
