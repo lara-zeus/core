@@ -51,26 +51,26 @@
 </header>
 
 <header class="bg-gray-100 dark:bg-gray-800">
-        <div class="container mx-auto py-2 px-3">
-            <div class="flex justify-between items-center">
-                <div class="w-full">
-                    @if(isset($breadcrumbs))
-                        <nav class="text-gray-400 font-bold my-1" aria-label="Breadcrumb">
-                            <ol class="list-none p-0 inline-flex">
-                                {{ $breadcrumbs }}
-                            </ol>
-                        </nav>
-                    @endif
-                    @if(isset($header))
-                        <div class="italic font-semibold text-xl text-gray-600 dark:text-gray-100">
-                            {{ $header }}
-                        </div>
-                    @endif
-                </div>
-                <span class="bolt-loading animate-pulse"></span>
+    <div class="container mx-auto py-2 px-3">
+        <div class="flex justify-between items-center">
+            <div class="w-full">
+                @if(isset($breadcrumbs))
+                    <nav class="text-gray-400 font-bold my-1" aria-label="Breadcrumb">
+                        <ol class="list-none p-0 inline-flex">
+                            {{ $breadcrumbs }}
+                        </ol>
+                    </nav>
+                @endif
+                @if(isset($header))
+                    <div class="italic font-semibold text-xl text-gray-600 dark:text-gray-100">
+                        {{ $header }}
+                    </div>
+                @endif
             </div>
+            <span class="bolt-loading animate-pulse"></span>
         </div>
-    </header>
+    </div>
+</header>
 
 <div class="container mx-auto my-6">
     {{ $slot }}
