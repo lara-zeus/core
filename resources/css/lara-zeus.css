@@ -1,7 +1,10 @@
 @import 'tailwindcss';
 @import './_checkbox-cards.css';
+@import './theme.css';
 
 @source '../../../**/*.php';
+
+@variant dark (&:where(.dark, .dark *));
 
 /* debug tool 😜 */
 .bord {

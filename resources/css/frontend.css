@@ -6,6 +6,8 @@
 @source '../../vendor/filament/**/*.blade.php';
 @source '../../../**/*.blade.php';
 
+@variant dark (&:where(.dark, .dark *));
+
 /* Sky search result highlight */
 span.highlight {
     @apply bg-primary-200 text-primary-700 px-2
