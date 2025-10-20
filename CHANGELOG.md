@@ -2,6 +2,22 @@
 
 All notable changes to `zeus` will be documented in this file
 
+## 4.0.3 - 2025-10-20
+
+### What's Changed
+
+* Bump aglipanci/laravel-pint-action from 2.4 to 2.6 by @dependabot[bot] in https://github.com/lara-zeus/core/pull/117
+* Bump stefanzweifel/git-auto-commit-action from 5 to 7 by @dependabot[bot] in https://github.com/lara-zeus/core/pull/119
+* Bump dependabot/fetch-metadata from 2.2.0 to 2.4.0 by @dependabot[bot] in https://github.com/lara-zeus/core/pull/118
+* Bump actions/checkout from 4 to 5 by @dependabot[bot] in https://github.com/lara-zeus/core/pull/116
+* fix: browser/filament dark mode mismatch by @Abdulmajeed-Jamaan in https://github.com/lara-zeus/core/pull/120
+
+### New Contributors
+
+* @Abdulmajeed-Jamaan made their first contribution in https://github.com/lara-zeus/core/pull/120
+
+**Full Changelog**: https://github.com/lara-zeus/core/compare/4.0.2...4.0.3
+
 ## 4.0.2 - 2025-10-17
 
 ### What's Changed
@@ -454,11 +470,13 @@ php artisan vendor:publish --tag=zeus-assets
 
 
 
+
 ```
 the same for the views, backup your changes and republish them:
 
 ```bash
 php artisan vendor:publish --tag=zeus-views
+
 
 
 
