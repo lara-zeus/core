@@ -1,0 +1,28 @@
+# Exclude development & CI files from package exports
+/.github            export-ignore
+/.gitignore         export-ignore
+/.gitattributes     export-ignore
+/phpunit.xml        export-ignore
+/phpunit.xml.dist   export-ignore
+/pint.json          export-ignore
+/phpstan.neon       export-ignore
+/phpstan.neon.dist  export-ignore
+/.editorconfig      export-ignore
+
+# Exclude tests & local tooling
+/tests              export-ignore
+/.vscode            export-ignore
+/.idea              export-ignore
+
+# Exclude docs if you don’t want them in installs
+/docs               export-ignore
+
+# Exclude node tooling since we generate output into /resources/dist
+/package.json       export-ignore
+/package-lock.json  export-ignore
+/pnpm-lock.yaml     export-ignore
+/yarn.lock          export-ignore
+/vite.config.*      export-ignore
+
+# Exclude composer unuseful files
+/composer.lock      export-ignore
