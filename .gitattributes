@@ -25,4 +25,4 @@
 /vite.config.*      export-ignore
 
 # Exclude composer unuseful files
-/composer.lock        export-ignore
+/composer.lock      export-ignore
