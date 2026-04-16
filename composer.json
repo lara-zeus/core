@@ -26,7 +26,7 @@
         "php": "^8.2",
         "ext-json": "*",
         "filament/filament": "^4.6.0",
-        "lara-zeus/laravel-seo": "^1.0",
+        "lara-zeus/laravel-seo": "^2.0",
         "lara-zeus/spatie-translatable": "^1.0"
     },
     "require-dev": {
