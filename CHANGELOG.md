@@ -2,6 +2,16 @@
 
 All notable changes to `zeus` will be documented in this file
 
+## 4.0.5 - 2026-04-16
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 2.5.0 to 3.0.0 by @dependabot[bot] in https://github.com/lara-zeus/core/pull/126
+* support laravel 13 by @atmonshi in https://github.com/lara-zeus/core/pull/127
+* Bump ramsey/composer-install from 3 to 4 by @dependabot[bot] in https://github.com/lara-zeus/core/pull/125
+
+**Full Changelog**: https://github.com/lara-zeus/core/compare/4.0.4...4.0.5
+
 ## 5.1.0 - 2026-04-16
 
 support laravel 13
@@ -492,11 +502,13 @@ php artisan vendor:publish --tag=zeus-assets
 
 
 
+
 ```
 the same for the views, backup your changes and republish them:
 
 ```bash
 php artisan vendor:publish --tag=zeus-views
+
 
 
 
