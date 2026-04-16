@@ -2,6 +2,10 @@
 
 All notable changes to `zeus` will be documented in this file
 
+## 5.1.0 - 2026-04-16
+
+support laravel 13
+
 ## 5.0.0 - 2026-03-11
 
 support filament 5
@@ -487,11 +491,13 @@ php artisan vendor:publish --tag=zeus-assets
 
 
 
+
 ```
 the same for the views, backup your changes and republish them:
 
 ```bash
 php artisan vendor:publish --tag=zeus-views
+
 
 
 
