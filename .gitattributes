@@ -1,28 +1,22 @@
-# Exclude development & CI files from package exports
-/.github            export-ignore
-/.gitignore         export-ignore
-/.gitattributes     export-ignore
-/phpunit.xml        export-ignore
-/phpunit.xml.dist   export-ignore
-/pint.json          export-ignore
-/phpstan.neon       export-ignore
-/phpstan.neon.dist  export-ignore
-/.editorconfig      export-ignore
+* text=auto
+*.css linguist-vendored
+*.scss linguist-vendored
+*.js linguist-vendored
 
-# Exclude tests & local tooling
-/tests              export-ignore
-/.vscode            export-ignore
-/.idea              export-ignore
-
-# Exclude docs if you don’t want them in installs
-/docs               export-ignore
-
-# Exclude node tooling since we generate output into /resources/dist
-/package.json       export-ignore
-/package-lock.json  export-ignore
-/pnpm-lock.yaml     export-ignore
-/yarn.lock          export-ignore
-/vite.config.*      export-ignore
-
-# Exclude composer unuseful files
-/composer.lock      export-ignore
+# Ignore development files in distribution
+/tests export-ignore
+/.github export-ignore
+/phpstan.neon export-ignore
+/phpstan-baseline.neon export-ignore
+/phpstan.neon.dist export-ignore
+/phpunit.xml export-ignore
+/phpunit.sqlite.xml export-ignore
+/phpunit.xml.dist export-ignore
+/composer.lock export-ignore
+/.editorconfig export-ignore
+/.gitattributes export-ignore
+/.gitignore export-ignore
+/CHANGELOG.md export-ignore
+/pint.json export-ignore
+/stubs export-ignore
+/artisan export-ignore
