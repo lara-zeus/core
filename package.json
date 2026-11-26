@@ -12,6 +12,6 @@
         "@tailwindcss/typography": "^0.5.16",
         "tailwindcss": "^4.1.7",
         "sortablejs": "^1.15.0",
-        "esbuild": "^0.19.2"
+        "esbuild": "^0.28.2"
     }
 }
