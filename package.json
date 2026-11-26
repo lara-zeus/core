@@ -7,7 +7,7 @@
         "dev": "npm run dev-front && npm run dev-filament && node bin/build.js"
     },
     "devDependencies": {
-        "@tailwindcss/forms": "^0.5.10",
+        "@tailwindcss/forms": "^0.5.11",
         "@tailwindcss/postcss": "^4.1.7",
         "@tailwindcss/typography": "^0.5.16",
         "tailwindcss": "^4.1.7",
