@@ -2,6 +2,16 @@
 
 All notable changes to `zeus` will be documented in this file
 
+## 4.0.6 - 2026-11-27
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 3.0.0 to 3.1.0 by @dependabot[bot] in https://github.com/lara-zeus/core/pull/128
+* chore: align docs structure and cleanup by @atmonshi in https://github.com/lara-zeus/core/pull/129
+* updates by @atmonshi in https://github.com/lara-zeus/core/pull/152
+
+**Full Changelog**: https://github.com/lara-zeus/core/compare/4.0.5...4.0.6
+
 ## v3.1.10 - 2024-08-02
 
 ### What's Changed
@@ -384,11 +394,13 @@ php artisan vendor:publish --tag=zeus-assets
 
 
 
+
 ```
 the same for the views, backup your changes and republish them:
 
 ```bash
 php artisan vendor:publish --tag=zeus-views
+
 
 
 
