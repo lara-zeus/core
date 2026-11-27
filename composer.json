@@ -25,7 +25,7 @@
     "require": {
         "php": "^8.2",
         "ext-json": "*",
-        "filament/filament": "^5.6",
+        "filament/filament": "^5.7",
         "lara-zeus/laravel-seo": "^2.0",
         "lara-zeus/spatie-translatable": "^2.0"
     },
